@@ -1,0 +1,200 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: sans-serif, arial;
+}
+body::selection {
+  background: black;
+}
+input,
+option,
+textarea {
+  font-family: sans-serif, arial;
+}
+a {
+  text-decoration: none;
+}
+.header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  background: linear-gradient(to right, pink, rgb(177, 0, 177));
+  color: white;
+  padding: 8px;
+  position: sticky;
+  z-index: 10;
+  top: 0;
+}
+.header .navbar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: flex-start;
+  gap: 32px;
+  padding: 16px 0;
+}
+.header .navbar .nav-item {
+  color: white;
+  overflow: hidden;
+  position: relative;
+  padding: 4px 0;
+}
+.header .navbar .nav-item::after {
+  content: "";
+  width: 100%;
+  height: 2px;
+  background: white;
+  position: absolute;
+  bottom: 0px;
+  left: -100%;
+  transition: all 0.4s;
+}
+.header .navbar .nav-item:hover::after {
+  left: 0;
+}
+.header .prof {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+.header .prof .prof-pic {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  transition: all 0.3s;
+}
+.header .prof .prof-pic:hover {
+  transform: scale(1.2);
+}
+.header .prof .prof-name {
+  transition: all 0.3s;
+}
+.header .prof .prof-pic:hover + .prof-name {
+  border-bottom: 1.5px solid white;
+}
+.main {
+  min-height: 100dvh;
+  background: rgb(235, 235, 235);
+  padding: 24px;
+}
+.main .summary {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: purple;
+  color: whitesmoke;
+  padding: 16px;
+  border-radius: 24px;
+  margin: 32px 0;
+}
+.main .summary .cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  gap: 24px;
+  padding: 8px;
+}
+.main .summary .card {
+  background: pink;
+  color: white;
+  width: 200px;
+  min-height: 200px;
+  max-height: 400px;
+  text-align: center;
+  padding: 16px;
+  margin: 0 24px;
+  border-radius: 8px;
+  line-height: 2;
+  transition: all 0.3s;
+}
+.main .summary .card:hover {
+  background: rgb(248, 168, 182);
+  box-shadow: 2px 2px 16px 8px rgba(245, 245, 245, 0.171);
+}
+.main .summary .card > em {
+  transition: all 0.3s;
+  border-bottom: 1.5px solid whitesmoke;
+}
+.main .summary .card:hover > em {
+  font-weight: bolder;
+}
+.main .table {
+  background: purple;
+  padding: 16px;
+  margin: 32px 0;
+  border-radius: 24px;
+}
+.main .table table {
+  border-collapse: collapse;
+  width: 100%;
+}
+.main .table th,
+.main .table td {
+  border: 1px solid rgb(210, 210, 210);
+  padding: 8px;
+  color: white;
+  text-align: center;
+}
+.main .table .table-title {
+  padding: 8px 0;
+  color: whitesmoke;
+  font-weight: 800;
+}
+.main .table tr {
+  transition: all 0.1s;
+}
+.main .table tr:hover {
+  background: pink;
+}
+.main .table .paid {
+  color: rgb(10, 216, 10);
+}
+.main .table .pending {
+  color: blue;
+}
+.main .table .overdue {
+  color: red;
+}
+.main .panel {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  background: purple;
+  padding: 16px;
+  margin: 32px 0;
+  color: whitesmoke;
+  border-radius: 24px;
+}
+.main .panel .panel-details {
+  background: pink;
+  border-radius: 8px;
+}
+.main .panel .panel-line {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  padding: 16px;
+  color: white;
+}
+.footer {
+  background: linear-gradient(to right, pink, rgb(177, 0, 177));
+  text-align: center;
+  line-height: 2;
+  padding: 8px;
+  color: white;
+}

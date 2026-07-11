@@ -1,0 +1,133 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    direction: rtl;
+    font-family: vazirmatn;
+}
+/* start header */
+#header {
+    background: rgb(235, 130, 69);
+    padding: 10px;
+    color: rgb(8, 62, 239);
+}
+#header .header-title {
+    padding-bottom: 20px;
+    padding-right: 20px;
+}
+#header .header-div {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    line-height: 50px;
+}
+#header .header-div .lecturer {
+    width: 200px;
+}
+#header .header-div .resume {
+    text-decoration: none;
+}
+/* start main */
+#main {
+    background: rgb(79, 136, 194);
+    color: whitesmoke;
+    padding: 20px;
+}
+#main .info {
+    display: flex;
+    justify-content: space-around;
+    align-items: baseline;
+    gap: 100px;
+}
+#main .skills {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+#main .skills .skills-percent {
+    list-style-type: none;
+}
+#main .lectures table {
+    border-collapse: collapse;
+    width: 100%;
+}
+#main .lectures th,td {
+    border: 1.5px solid rgb(96, 94, 94);
+    padding: 8px;
+    border-radius: 10px;
+    text-align: center;
+}
+#main .lectures .lecture-video {
+    text-decoration: none;
+    color: whitesmoke;
+}
+#main .code  {
+    text-decoration: none;
+    color: black;
+    padding-bottom: 10px;
+    padding-top: 20px;
+}
+#main .code .source-py {
+    text-decoration: none;
+    color: black;
+}
+#main .question-box label,input,textarea{
+    display: flex;
+    margin: 10px 0;
+    width: 200px;
+    border-radius: 5px;
+    border-color: black;
+}
+#main .question-box textarea {
+    resize: none;
+    width: 300px;
+    height: 100px;
+}
+#main .question-box button {
+    margin-right: 10px;
+    padding: 10px 20px;
+    background: rgb(77, 109, 119);
+    color: white;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: all 0.3s;
+}
+#main .question-box button:hover {
+    background: rgb(41, 64, 71);
+}
+#footer {
+    background: rgb(235, 130, 69);
+}
+#footer .footer-div {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+}
+#footer .footer-div .programmer {
+    background: rgb(79, 136, 194);
+    color: whitesmoke;
+    width: 250px;
+    padding: 20px;
+    border-radius: 8px;
+}
+#footer .footer-div .programmer .programmer-pic {
+    width: 200px;
+    height: auto;
+}
+#footer .footer-div .programmer a {
+    text-decoration: none;
+    color: whitesmoke;
+}
+#footer .copyright {
+    text-align: center;
+    color: white;
+}
+/* my mistakes : */
+/* #main .question-box label,input,textarea =>
+#main .question-box label,
+#main .question-box input,
+#main .question-box textarea
+ */
+/* border-radius: 10px; doesn't work on td */
+/*  */

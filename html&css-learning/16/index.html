@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>main page</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header id="header">
+      <h1>Travel Cost Calculator ✈️</h1>
+      <p class="header-describe">Plan your trip expenses easily</p>
+    </header>
+    <main id="main">
+      <img src="./map.jpg" alt="world map" class="map" />
+      <div class="cards">
+        <form action="#">
+          <fieldset class="info-box">
+            <legend class="info-box-title">TRAVEL INFORMATION</legend>
+            <label for="country">Choose Your Destination</label>
+            <input list="countries" id="country" name="country" />
+            <datalist id="countries">
+              <option value="turkey">Turkey</option>
+              <option value="uae">UAE</option>
+              <option value="germany">Germany</option>
+              <option value="france">France</option>
+              <option value="italy">Italy</option>
+              <option value="spain">Spain</option>
+              <option value="portugal">Portugal</option>
+              <option value="brazil">Brazil</option>
+              <option value="netherland">Netherland</option>
+              <option value="hungry">Hungry</option>
+              <option value="usa">USA</option>
+              <option value="morocco">Morocco</option>
+              <option value="japan">Japan</option>
+              <option value="china">China</option>
+              <option value="russia">Russia</option>
+            </datalist>
+            <label for="travelers">Number of Travelers</label>
+            <input
+              type="number"
+              name="travelers"
+              id="travelers"
+              min="0"
+              max="20"
+            />
+            <label for="duration">Trip Duration</label>
+            <input
+              type="number"
+              name="duration"
+              id="duration"
+              min="0"
+              max="30"
+            />
+            <div class="options">
+              <label for=""
+                >Select the Options you want (if you want to choose an option,
+                click on the text)</label
+              >
+              <input type="checkbox" name="flight" id="flight" />
+              <label for="flight">Flight ✈️ </label>
+              <p>
+                Book affordable, smooth flights to reach to reach your
+                destination comfortably.
+              </p>
+              <input type="checkbox" name="hotel" id="hotel" />
+              <label for="hotel"> Hotel 🛏️ </label>
+              <p>
+                Stay in quality hotels offering comfort and reliable service
+              </p>
+              <input type="checkbox" name="food" id="food" />
+              <label for="food"> Food 😋 </label>
+              <p>
+                Enjoy delicious local and international dishes throughout your
+                trip
+              </p>
+              <input
+                type="checkbox"
+                name="transportation"
+                id="transportation"
+              />
+              <label for="transportation"> City Transportation 🚌 </label>
+              <p>
+                get around easily with safe, fast, and convenient city transport
+                options
+              </p>
+              <input type="checkbox" name="insurance" id="insurance" />
+              <label for="insurance"> Travel Insurance 🩻 </label>
+              <p>Travel confidently with coverage for unexpected events</p>
+            </div>
+            <div class="btns">
+              <button type="submit" class="calculate">Calculate Cost</button>
+              <button type="reset" class="reset">Reset Form</button>
+            </div>
+          </fieldset>
+        </form>
+      </div>
+    </main>
+  </body>
+</html>

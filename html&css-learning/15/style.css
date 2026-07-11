@@ -1,0 +1,117 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: sans-serif;
+}
+.card-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 40px;
+}
+.card-div .card {
+    background: rgb(251, 251, 251);
+    padding: 20px;
+    border: 2px solid rgb(7, 19, 115);
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgb(5, 72, 255),-2px -2px 10px rgb(5, 72, 255);
+}
+.card-div .card .user-name {
+    padding-left: 40px;
+    padding-bottom: 10px;
+}
+.card-div .card .card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.card-div .card .card-header .profile-img-div {
+    padding-left: 10px;
+}
+.card-div .card .card-header .profile-img-div .profile-img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    outline: 1.5px solid orangered;
+}
+.card-div .card .card-header .card-infos {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 100px;
+    padding-right: 35px;
+}
+.card-div .card .card-header .card-infos .card-info {
+    text-align: center;
+}
+.card-div .card .card-header .card-infos .card-info p {
+    font-weight: 50;
+    color: rgb(145, 144, 144);
+}
+.card-div .card .profile-bio {
+    width: 600px;
+    padding: 10px 10px 10px 10px;
+}
+.card-div .card .btns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    padding: 10px 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid rgb(184, 184, 184);
+}
+.card-div .card .btns .btn {
+    width: 240px;
+    padding: 10px 10px;
+    border-radius: 5px;
+    border: none;
+}
+.card-div .card .btns .follow {
+    border: none;
+    background: rgb(21, 21, 233);
+    color: white;
+    transition: all .2s;
+}
+.card-div .card .btns .message {
+    border: 1px solid gray;
+    background: white;
+    transition: all .2s;
+}
+.card-div .card .btns .message-link {
+    text-decoration: none;
+    color: black;
+}
+.card-div .card .btns .follow:focus {
+    border: 2px solid rgb(21, 21, 233);
+    background: white;
+    font-weight: bold;
+    color: black;
+    box-shadow: 0 0 10px gray;
+}
+.card-div .card .btns .message:focus {
+    border: 2px solid black;
+    background: white;
+    font-weight: bold;
+    box-shadow: 0 0 10px gray;
+}
+.card-div .card .gallery {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    padding-top: 20px;
+}
+.card-div .card .gallery .gallery-img {
+    width: 198px;
+    height: 198px;
+    transition: all 0.3s;
+}
+.card-div .card .gallery .gallery-img:hover {
+    width: 200px;
+    height: 200px;
+    box-shadow: 1px 1px 10px gray,-1px -1px 10px gray;
+}

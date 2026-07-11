@@ -1,0 +1,95 @@
+* {
+    margin: 0;
+    padding: 0;
+    direction: rtl;
+    font-family: vazirmatn;
+}
+/* start header */
+#header {
+    background: rgb(82, 79, 79);
+    padding: 12px;
+    color: rgb(210, 155, 54);
+    line-height: 30px;
+}
+#header .pooster {
+    width: 200px;
+}
+/* start main */
+#main {
+    background: gray;
+    color: white;
+    padding: 15px;
+}
+#main .field {
+    border-radius: 20px;
+}
+#main .main-form *{
+    display: block;
+    padding: 3px;
+    margin: 0 10px;
+}
+#main .did-programming *{
+    display: block;
+    padding: 3px;
+    margin: 0 10px;
+}
+#main .participate *{
+    display: block;
+    padding: 3px;
+    margin: 0 10px;
+}
+#main .workshops *{
+    display: block;
+    padding: 3px;
+    margin: 0 10px;
+}
+#main .more-definition *{
+    display: block;
+    padding: 3px;
+    margin: 0 10px;
+}
+#main .rules *{
+    padding: 3px;
+    margin: 0 10px;
+}
+#main .rules-item *{
+    padding: 3px;
+    margin: 0 20px;
+}
+#main .accept .accept-text {
+    margin-right: 18px;
+}
+#main .each-button {
+    background: rgb(158, 197, 221);
+    color: white;
+    padding: 6px;
+    border-radius: 5px;
+    display: inline;
+    margin: 10px 0;
+    margin-right: 18px;
+    gap: 18px;
+}
+#main textarea {
+    resize: none;
+    width: 180px;
+}
+/* start footer */
+#footer {
+    background: rgb(82, 79, 79);
+    display: block;
+    text-align: center;
+    color: whitesmoke;
+}
+#footer .footer-link {
+    text-decoration: none;
+    color: whitesmoke;
+    display: block;
+    padding-top: 20px;
+}
+#footer .teacher {
+    padding-top: 20px;
+}
+#footer .copyright {
+    padding-top: 20px;
+    padding-bottom: 10px;
+}

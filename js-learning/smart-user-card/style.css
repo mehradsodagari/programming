@@ -1,0 +1,30 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background: blue;
+}
+#main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  margin: 24px auto;
+  background: whitesmoke;
+  width: 500px;
+  border-radius: 24px;
+  height: 600px;
+  padding: 24px 0;
+}
+#main label {
+  padding: 8px 0;
+}
+#main input {
+  margin: 8px 0;
+}
+#main button {
+  margin: 8px 0;
+}

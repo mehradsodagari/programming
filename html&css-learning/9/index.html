@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="fa-IR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>کنفرانس برنامه نویسی</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <!-- start header -->
+    <header id="header">
+      <h1 class="header-title">درباره سخنران</h1>
+      <div class="header-div">
+        <img src="./lecturer.png" alt="" class="lecturer" />
+        <div>
+          <p>نام و نام خانوادگی : MR.Sodagari</p>
+          <p>
+            معرفی : هیچگونه اطلاعات خاصی از این برنامه نویس در دسترس نمی باشد!
+          </p>
+        </div>
+        <div>
+          <p>شغل : برنامه نویس</p>
+          <a href="./resume.pdf" download class="resume">دانلود رزومه</a>
+        </div>
+      </div>
+    </header>
+    <!-- start main -->
+    <main id="main">
+      <div class="info">
+        <div>
+          <p>کشور : ایران</p>
+          <p>زبان های برنامه نویسی که بلد است :</p>
+          <ul>
+            <li>Python</li>
+            <li>C++</li>
+            <li>JavaScript</li>
+          </ul>
+        </div>
+        <div>
+          <p>شهر : رشت</p>
+          <p>سال شروع برنامه نویسی : 1404</p>
+        </div>
+      </div>
+      <div class="skills">
+        <div>
+          <strong>مهارت ها :</strong>
+          <ol>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>React</li>
+            <li>Git</li>
+            <li>Linux</li>
+          </ol>
+        </div>
+        <div>
+          <b>درصد مهارت :</b>
+          <ul class="skills-percent">
+            <li>70%</li>
+            <li>45%</li>
+            <li>20%</li>
+            <li>85%</li>
+            <li>10%</li>
+          </ul>
+        </div>
+      </div>
+      <div class="lectures">
+        <table>
+          <caption>
+            سخنرانی ها
+          </caption>
+          <tr>
+            <th>عنوان</th>
+            <th>تاریخ</th>
+            <th>توضیح کوتاه</th>
+            <th>زمان سخنرانی</th>
+            <th>لینک مشاهده ویدیو</th>
+          </tr>
+          <tr>
+            <td>Git</td>
+            <td><time datetime="1403-09-24">1403/09/24</time></td>
+            <td>برای انجام پروژه به صورت گروهی می بایست گیت را بلد باشید</td>
+            <td><time>01:25:02</time></td>
+            <td><a href="#" class="lecture-video">لینک مشاهده ویدیو</a></td>
+          </tr>
+          <tr>
+            <td>Linux</td>
+            <td><time datetime="1404-11-27">1404/11/27</time></td>
+            <td>
+              در این سخنرانی درباره نحوه کار با لینوکس و اینکه چرا لینوکس برای
+              لرنامه نویس ها و افرادی که در حوزه کامپیوتر کار می کنند بهتر است
+            </td>
+            <td><time>04:32:49</time></td>
+            <td><a href="#" class="lecture-video">لینک مشاهده ویدیو</a></td>
+          </tr>
+          <tr>
+            <td>Network</td>
+            <td><time datetime="1404-06-02">1404/06/02</time></td>
+            <td>
+              این دوره آموزش جامع شبکه است. پس از دیدن این سخنرانی ذهنیت خوبی
+              نسبت به شیکه پیدا خواهید کرد و متوجه می شوید که به این حوزه علاقه
+              دارید یا خیر
+            </td>
+            <td><time>07:08:53</time></td>
+            <td><a href="#" class="lecture-video">لینک مشاهده ویدیو</a></td>
+          </tr>
+        </table>
+      </div>
+      <div class="code">
+        <h3>حلقه در پایتون :</h3>
+        <pre>
+            <code>
+                for number in range(1,10+1):
+                    print(number,end=' ')
+            </code>
+            <samp>
+                1 2 3 4 5 6 7 8 9 10
+            </samp>
+        </pre>
+        <a href="./code.py" class="source-py">source code</a>
+      </div>
+      <div>
+        <details>
+          <summary>
+            اگر سوال دارید در این قسمت می توانید سوال خود را بپرسد
+          </summary>
+          <div class="question-box">
+            <form action="#">
+              <label for="fullname">نام</label>
+              <input type="text" name="fullname" id="fullname" required />
+              <label for="email">ایمیل</label>
+              <input type="email" name="email" id="email" required />
+              <select name="type" id="type" required>
+                <option value="" disabled selected>نوع سوال</option>
+                <option value="general">عمومی</option>
+                <option value="technical">فنی</option>
+                <option value="collabration">همکاری</option>
+              </select>
+              <label for="question">متن سوال</label>
+              <textarea name="question" id="question" required></textarea>
+              <label for="file">آپلود فایل</label>
+              <input type="file" name="file" id="file" />
+              <button type="submit">ارسال</button>
+            </form>
+          </div>
+        </details>
+      </div>
+    </main>
+    <footer id="footer">
+      <div class="footer-div">
+        <section class="programmer">
+          <img src="./front.png" alt="frontend" class="programmer-pic" />
+          <p>نام : MR.james</p>
+          <p>تخصص : فرانت اند</p>
+          <a href="#">صفحه شخصی</a>
+        </section>
+        <section class="programmer">
+          <img src="./network.png" alt="network" class="programmer-pic" />
+          <p>نام : MR.bill</p>
+          <p>تخصص : شبکه</p>
+          <a href="#">صفحه شخصی</a>
+        </section>
+        <section class="programmer">
+          <img src="./ceo.png" alt="ceo" class="programmer-pic" />
+          <p>نام : MR.isac</p>
+          <p>تخصص : سئو</p>
+          <a href="#">صفحه شخصی</a>
+        </section>
+      </div>
+      <p class="copyright">Copyright | Mehrad Sodagari&copy;</p>
+    </footer>
+  </body>
+</html>
+<!-- my mistakes :  -->
+<!-- completet the alt  -->
+<!-- use thead,tbody and tfoot for table -->
+<!--  -->

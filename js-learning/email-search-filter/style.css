@@ -1,0 +1,73 @@
+body {
+  background: rgb(0, 0, 156);
+}
+#input-box {
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 24px;
+  margin: 24px auto;
+  width: 80%;
+  border-radius: 16px;
+}
+#input-box #email {
+  margin: 8px;
+  border-radius: 8px;
+  border: 1px solid black;
+  padding: 8px 18px;
+}
+#input-box button {
+  padding: 6px 14px;
+  border: 1px solid black;
+  border-radius: 8px;
+  transition: all 0.3s;
+}
+#input-box button:hover {
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+  transform: scale(1.1);
+}
+.result {
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  padding: 24px;
+  margin: 24px auto;
+  width: 80%;
+  border-radius: 16px;
+}
+.blue {
+  background: blue;
+  color: white;
+  border-radius: 8px;
+  padding: 16px;
+  text-align: center;
+  width: 200px;
+  margin: 16px;
+}
+.purple {
+  background: purple;
+  color: white;
+  border-radius: 8px;
+  padding: 16px;
+  text-align: center;
+  width: 200px;
+  margin: 16px;
+}
+.pink {
+  background: pink;
+  color: white;
+  border-radius: 8px;
+  padding: 16px;
+  text-align: center;
+  width: 200px;
+  margin: 16px;
+}
+.start,
+.end,
+.include {
+  list-style-type: none;
+}

@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="./app.js" defer></script>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div id="main">
+      <div id="content">
+        <div id="btns">
+          <button id="rock" class="btn">Rock</button>
+          <button id="paper" class="btn">Paper</button>
+          <button id="scissor" class="btn">Scissor</button>
+        </div>
+        <div id="score">
+          <h3 id="user-score">user : 0</h3>
+          <h3 id="pc-score">computer : 0</h3>
+        </div>
+        <button onclick="reset()" id="reset" class="btn">Reset</button>
+        <p class="result"></p>
+      </div>
+    </div>
+  </body>
+</html>

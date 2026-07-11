@@ -1,0 +1,106 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: sans-serif;
+}
+#header {
+  padding: 15px 17px;
+  background: rgb(99, 2, 2);
+  color: white;
+}
+#header .header-describe {
+  font-size: 13px;
+  padding: 5px 10px;
+  color: rgba(255, 255, 255, 0.709);
+}
+#main {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2)), url("background.jpg");
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  padding: 30px;
+}
+#main .cards-div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 20px;
+  align-items: center;
+  margin-bottom: 40px;
+}
+#main .cards-div .card {
+  background: rgb(35, 70, 146);
+  color: rgba(245, 245, 245, 0.726);
+  padding: 50px 35px;
+  line-height: 23px;
+  transition: all 0.3s;
+  border-radius: 10px;
+  outline: 1px solid rgb(184, 0, 0);
+  cursor: pointer;
+}
+#main .cards-div .card .card-img {
+  width: 200px;
+  height: 200px;
+  object-fit: contain;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+#main .cards-div .card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 12px black;
+  outline: 1.5px solid darkred;
+}
+#main .cards-div .card input {
+  display: none;
+}
+#main .cards-div .card .card-body {
+  background: rgb(35, 70, 146);
+  padding: 15px 10px;
+  border-radius: 10px;
+  display: block;
+  transition: 0.3s;
+}
+#main .cards-div .card input[type="radio"]:checked + .card-body {
+  background: rgb(17, 41, 93);
+  outline: 2px solid yellow;
+}
+#main .cards-div .card.locked {
+  pointer-events: none;
+}
+#main .cards-div .card:hover .card-img {
+  transform: scale(1.07);
+}
+#main .cards-div .card:hover h4:first-of-type {
+  color: rgb(245, 245, 245);
+  text-shadow: 0 0 10px black;
+}
+/* #main .cards-div .card:hover .card-img:active {
+    transform: scale(1.2);
+} */
+#main .btn {
+  background-image: linear-gradient(
+    to left,
+    rgb(50, 173, 255),
+    rgb(236, 4, 178)
+  );
+  padding: 8px 16px;
+  border-radius: 5px;
+  color: white;
+  transition: all 0.3s;
+}
+#main .btn:hover {
+  transform: scale(1.05);
+  font-weight: bold;
+  cursor: pointer;
+}
+#main .btn:focus {
+  background-image: linear-gradient(
+    to left,
+    rgb(50, 122, 255),
+    rgb(236, 4, 124)
+  );
+}

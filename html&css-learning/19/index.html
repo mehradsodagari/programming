@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Weather</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div>
+        <h1>Weather Analytics Dashboard</h1>
+        <p>Real-time weather insights and weekly forecasts</p>
+      </div>
+      <div>
+        <form action="#">
+          <input
+            type="text"
+            placeholder="Search City or Country"
+            class="header-search"
+          />
+        </form>
+      </div>
+      <div class="about-analyst">
+        <div>
+          <h3>Alex Morgan</h3>
+          <h3>Weather Analyst</h3>
+        </div>
+        <img src="./alex-morgan.jpg" alt="Alex Morgan" class="analyst-image" />
+      </div>
+    </header>
+    <main class="main">
+      <div class="side-div">
+        <aside class="side-bar">
+          <div>
+            <h3 class="side-bar-title">WeatherPro</h3>
+            <p class="side-bar-text">Smart climate monitoring</p>
+          </div>
+          <div>
+            <ul class="side-list">
+              <li><a href="#" class="side-links">🏠 Dashboard</a></li>
+              <li><a href="#" class="side-links">⛅ Forecast</a></li>
+              <li><a href="#" class="side-links">⚠️ Weather Alerts</a></li>
+              <li><a href="#" class="side-links">📊 Statistics</a></li>
+              <li><a href="#" class="side-links">⚙️ Settings</a></li>
+            </ul>
+          </div>
+          <div class="version">
+            <p>Version 1.0</p>
+          </div>
+        </aside>
+      </div>
+      <div class="main-div">
+        <div class="weather-cards">
+          <div class="two-cards">
+            <section class="each-card temp">
+              <p class="card-icon">🌡️</p>
+              <h3>Today's Temperature</h3>
+              <h3>24°C</h3>
+              <h3>Feels Like 26°C</h3>
+              <p>Updated 10 minutes ago</p>
+            </section>
+            <section class="each-card wind">
+              <p class="card-icon">💨</p>
+              <h3>Wind Speed</h3>
+              <h3>18 km/h</h3>
+              <h3>Direction : North-East</h3>
+              <p>Stable wind conditions</p>
+            </section>
+          </div>
+          <div class="two-cards">
+            <section class="each-card humid">
+              <p class="card-icon">💧</p>
+              <h3>Humidity</h3>
+              <h3>62%</h3>
+              <h3>Moderate Humidity Level</h3>
+              <p>Comfortable air conditions</p>
+            </section>
+            <section class="each-card uv">
+              <p class="card-icon">☀️</p>
+              <h3>UV Index</h3>
+              <h3>5.2</h3>
+              <h3>Moderate Exposure Risk</h3>
+              <p>Updated 10 minutes ago</p>
+            </section>
+          </div>
+        </div>
+        <div class="week">
+          <div class="week-title">
+            <h3 class="week-title-inner">7-Day Forecast</h3>
+            <p class="week-title-inner">
+              Weather predictions for the upcoming week
+            </p>
+          </div>
+          <div class="seven-days">
+            <section class="each-day">
+              <h4>Monday</h4>
+              <p>🌤</p>
+              <p>High: 26°C</p>
+              <p>Low: 17°C</p>
+              <p>Condition:</p>
+              <p>Partly cloudy</p>
+            </section>
+            <section class="each-day">
+              <h4>Tuesday</h4>
+              <p>☀️</p>
+              <p>High: 29°C</p>
+              <p>Low: 19°C</p>
+              <p>Condition:</p>
+              <p>Sunny</p>
+            </section>
+            <section class="each-day">
+              <h4>Wednesday</h4>
+              <p>🌧</p>
+              <p>High: 23°C</p>
+              <p>Low: 16°C</p>
+              <p>Condition:</p>
+              <p>Light rain</p>
+            </section>
+            <section class="each-day">
+              <h4>Thursday</h4>
+              <p>⛅</p>
+              <p>High: 25°C</p>
+              <p>Low: 18°C</p>
+              <p>Condition:</p>
+              <p>Cloudy intervals</p>
+            </section>
+            <section class="each-day">
+              <h4>Friday</h4>
+              <p>🌦</p>
+              <p>High: 22°C</p>
+              <p>Low: 15°C</p>
+              <p>Condition:</p>
+              <p>Showers</p>
+            </section>
+            <section class="each-day">
+              <h4>Saturday</h4>
+              <p>☀️</p>
+              <p>High: 27°C</p>
+              <p>Low: 18°C</p>
+              <p>Condition:</p>
+              <p>Sunny</p>
+            </section>
+            <section class="each-day">
+              <h4>Sunday</h4>
+              <p>🌤</p>
+              <p>High: 26°C</p>
+              <p>Low: 17°C</p>
+              <p>Condition:</p>
+              <p>Partly cloudy</p>
+            </section>
+          </div>
+        </div>
+        <div class="weather-summary">
+          <h3>Today's Weather Summary</h3>
+          <p>
+            Today the weather is generally pleasant with moderate temperatures
+            and light winds. Humidity levels remain comfortable and the UV index
+            is moderate during midday. No severe weather alerts are expected in
+            the next 24 hours.
+          </p>
+        </div>
+      </div>
+    </main>
+    <footer class="footer">
+      <b>Weather Analytics Dashboard</b>
+      <b>Data updates every 15 minutes</b>
+      <p>&copy; 2026 WeatherPro Analytics</p>
+    </footer>
+  </body>
+</html>
+<!-- my mistakes -->
+<!-- dashboard image is very large , for dashboard you should use width with this values: 32px 40px or 48px , not 150px -->
+<!-- use small letters in placeholder -->

@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profile Submission</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+      <div id="form">
+        <h2 class="form-title">Crete Tour Profile</h2>
+        <form action="#">
+        <fieldset class="field">
+            <legend>Basic Info</legend>
+            <label for="username">Username</label>
+            <input type="text" name="username" id="username" class="write-input" required>
+            <label for="profile">Profile Picture</label>
+            <input type="file" name="profile" id="profile" required>
+        </fieldset>
+        <fieldset class="field">
+            <legend>Preferences</legend>
+            <label for="skill">HTML CSS Skill Level</label>
+            <input type="range" name="skill" id="skill" min="0" max="100">
+            <label for="skill">About You</label>
+            <textarea name="" id="" placeholder="Write a short bio..." class="write-input" required></textarea>
+        </fieldset>
+        <fieldset class="field">
+            <label for="eamil"><input type="checkbox" name="eamil" id="eamil" required>Recieve email updates</label>
+            <label for="subscribe"><input type="checkbox" name="subscribe" id="subscribe" required>Subscribe to newsletter</label>
+        </fieldset>
+       <button type="submit" class="btn">Save Profile</button>
+    </form>
+    </div>
+  </body>
+</html>
+<!-- field * => field (have details) -->
+<!-- width: 440px => 100% -->
+<!-- typos -->
+<!-- eamil => email -->
+<!-- textarea => complte name and id -->

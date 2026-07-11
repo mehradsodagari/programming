@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="fa-IR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ثبت نام کارگاه برنامه نویسی</title>
+    <link rel="shortcut icon" href="./images/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <!-- start header -->
+    <header id="header">
+        <img src="./images/pooster.png" alt="worksop pooster" class="pooster"/>
+      <h1>کارگاه برنامه نویسی</h1>
+     <p>در هر یک از کارگاه ها پس از آموزش مباحث مربوطه ، حوزه های مختلفی را که می توان به آنها ورود کرد را بررسی میکنیم تا دانشجو با توجه به علاقه مندی ها و استعداد خود بتواند حوزه کاری مورد نظر را انتخاب کند.</p>
+      <p>هزینه هر کارگاه : <del>5,400,000 تومان</del>&nbsp;&nbsp;<ins>4,200,000 تومان</ins></p>
+      <p>
+        تاریخ برگزاری کارگاه : <time datetime="1405/02/01">1405/02/01</time>
+      </p>
+      <p>مدت زمان برگزاری : <time datetime="">14:00-08:00</time></p>
+      <p>سطح کارگاه : تمام سطوح</p>
+    </header>
+    <!-- start main -->
+    <main id="main">
+      <fieldset class="field">
+          <legend>فرم ثبت نام در کارگاه برنامه نویسی </legend>
+       <form action="#">
+         <div class="main-form">
+          <label for="name">نام</label>
+          <input type="text" name="name" id="name"  required/>
+          <label for="lastname">نام خانوادگی</label>
+          <input type="text" name="lastname" id="lastname"  required/>
+          <label for="email">ایمیل</label>
+          <input type="email" name="email" id="email"  required/>
+          <label for="phonenumber">شماره تماس</label>
+          <input type="tel" name="phonenumber" id="phonenumber" maxlength="11" required/>
+          <label for="age">تاریخ تولد</label>
+          <input type="date" name="age" id="age" min="0" max="150" required/>
+        </div>
+        <div class="did-programming">
+            <label for="">آیا قبلا برنامه نویسی انجام داده اید؟</label>
+            <label for="yes">بله</label>
+            <input type="radio" name="programming" id="yes" required>
+            <label for="no">خیر</label>
+            <input type="radio" name="programming" id="no" required>
+            <label for="languages">در بالا گزینه بله را انتخاب کرده اید ، زبان هایی که با آنها برنامه نویسی کرده اید را بنویسید : </label>
+            <textarea name="languages" id="languages"></textarea>
+        </div>
+        <div class="participate">
+            <label for="off">شرکت حضوری</label>
+            <input type="radio" name="on-off" id="off" requiredagree>
+            <label for="on">شرکت آنلاین</label>
+            <input type="radio" name="on-off" id="on" requiredagree>
+        </div>
+        <div class="workshops">
+            <label for="">در کدام کارگاه ها می خواهید شرکت کنید :</label>
+            <label for="html-css">HTML&CSS</label>
+            <input type="checkbox" name="html-css" id="html-css">
+            <label for="js">JavaScript</label>
+            <input type="checkbox" name="js" id="js">
+            <label for="git">Git&GitHub</label>
+            <input type="checkbox" name="git" id="git">
+            <label for="linux">Linux</label>
+            <input type="checkbox" name="linux" id="linux">
+            <label for="network">Network</label>
+            <input type="checkbox" name="network" id="network">
+            <label for="api">API</label>
+            <input type="checkbox" name="api" id="api">
+            <label for="machine-learning">Machine Learning</label>
+            <input type="checkbox" name="machine-learning" id="machine-learning">
+            <label for="ui-ux">UI-UX</label>
+            <input type="checkbox" name="ui-ux" id="ui-ux">
+        </div>
+        <div class="more-definition">
+            <label for="definition">اگر نیاز است که درباره موضوعی توضیحی بدهید در پایین بنویسید</label>
+            <textarea name="" id="definition"></textarea>
+        </div>
+        <div class="rules">
+            <h3>قوانین :</h3>
+            <ol class="rules-item">
+                <li>پس از ثبت نام هزینه به هیچ وجه باز گردانده نمی شود.</li>
+                <li>گرفتن هرگونه فیلم و عکس در حین برگزاری کارگاه ممنوع است</li>
+                <li>امکان تغییر نوع شرکت در کارگاه تنها تا سه روز قبل از برگزاری کارگاه امکان پذیر است</li>
+            </ol>
+        </div>
+        <div class="accept">
+             <label for="agree" class="accept-text">با شرایط ثبت نام موافق هستم</label>
+            <input type="checkbox" name="agree" id="agree">
+        </div>
+            <button type="submit" class="each-button">ثبت نام</button>
+            <button type="reset" class="each-button">پاک کردن فرم</button>
+       </form>
+      </fieldset>
+    </main>
+    <!-- start footer -->
+    <footer id="footer">
+        <p class="teacher">برگزار کننده : لینوس توروالدز</p>
+        <a href="#" class="footer-link">ایمیل</a>
+        <a href="#" class="footer-link">لینک سایت</a>
+        <p class="copyright">Copyright | Mehrad Sodagari&copy;</p>
+    </footer>
+  </body>
+</html>
+<!-- my mistakes :  -->
+<!-- participate div : requiredagree => required -->
+<!-- use tags name instead of * -->
+<!-- use flex and gap instead margin -->
+<!-- age => birhtday -->
+<!--  -->

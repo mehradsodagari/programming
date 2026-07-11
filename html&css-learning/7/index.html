@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Practice</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div id="form-container">
+        <h2 class="form-title">Signup Form</h2>
+        <form action="#">
+        <label for="fullname">Full Name</label> 
+        <input type="text" name="fullname" id="fullname" placeholder="e.g. Mehrad Sodagari" class="input-box">
+        <label for="email">Email Address</label>
+        <input type="email" name="email" id="email" placeholder="you@example.com" class="input-box">
+        <label for="password">Password</label>
+        <input type="password" name="password" id="password" placeholder="Choose a strong password" class="input-box">
+        <label for="bio">Short Bio</label>
+        <textarea name="bio" id="bio" placeholder="Tell us a bit about yourself..." rows="3" class="input-box textarea-box"></textarea>
+        <label for="country">Country</label>
+        <select name="country" id="country" class="input-box">
+            <option value="" disabled selected>Select your country</option>
+            <option value="iran">Iran</option>
+            <option value="usa">USA</option>
+            <option value="netherland">Netherland</option>
+            <option value="brazil">Brazil</option>
+            <option value="china">China</option>
+            <option value="belgium">Belgium</option>
+            <option value="england">England</option>
+        </select>
+        <label for="">Gender</label>
+        <div class="radio-group">
+            <label for="male"><input type="radio" name="gender" id="male" value="male">Male</label>
+            <label for="female"><input type="radio" name="gender" id="female" value="female">Female</label>
+            <label for="other"><input type="radio" name="gender" id="other" value="other">Other</label>
+        </div>
+        <button type="submit" class="register-btn">Register</button>
+    </form>
+    </div>
+</body>
+</html>

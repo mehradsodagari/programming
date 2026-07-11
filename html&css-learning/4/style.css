@@ -1,0 +1,71 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: vazirmatn;
+}
+/* don't import vazirmatn font */
+body {
+  direction: rtl;
+  font-family: vazirmatn;
+  background: lightskyblue;
+}
+/* start header */
+#header {
+  color: white;
+}
+#header .logo {
+    width: 90px;
+}
+#header .web-header {
+  background: blue;
+  padding: 10px;
+}
+#header .nav-list {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  background: green;
+  gap: 70px;
+  padding: 8px;
+}
+#header .nav-list .nav-item {
+  text-decoration: none;
+  color: white;
+}
+/* start main */
+#main .course {
+  background: rgb(91, 129, 153);
+  margin: 30px;
+  padding: 20px;
+  border-radius: 15px;
+}
+#main .course .course-img {
+  width: 200px;
+  height: auto;
+  object-fit: fill;
+  padding-bottom: 10px;
+}
+/* when **height is set to auto**, the **object-fit** property becomes almost ineffective. */
+#main .course .titles-table {
+  border-collapse: collapse;
+  width: 100%;
+}
+#main .course .titles-table th,td {
+  border: 1px solid whitesmoke;
+  padding: 10px;
+  text-align: center;
+}
+#main .course .course-title {
+  border-top: 1px solid white;
+  padding-top: 10px;
+}
+#main .course .sign-in label,input{
+    display: flex;
+}
+/* input don't need to be flex */
+#footer {
+    background: white;
+    height: 200px;
+    text-align: center;
+    line-height: 50px;
+}

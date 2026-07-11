@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HOSPITAL DASHBOARD</title>
+    <link rel="shortcut icon" href="./fav-pic.png" type="image/png" />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="title-dashboard">
+        <div class="dashboard">
+          <input type="checkbox" name="dashboard" id="dashboard" />
+          <label for="dashboard">📋</label>
+          <h1 class="title">Hospital Management Panel</h1>
+          <div class="dashboard-list">
+            <a href="#" class="dashboard-item">Patients</a>
+            <a href="#" class="dashboard-item">Appointments</a>
+            <a href="#" class="dashboard-item">Doctors</a>
+            <a href="#" class="dashboard-item">Medications</a>
+            <a href="#" class="dashboard-item">Reports</a>
+            <a href="#" class="dashboard-item">Settings</a>
+          </div>
+        </div>
+      </div>
+      <div class="search-box-div">
+        <form action="#">
+          <button type="submit" class="btn">Search</button>
+          <input
+            type="text"
+            name="search"
+            id="search"
+            placeholder="Search patients…"
+            class="search-box"
+            autocomplete
+          />
+        </form>
+      </div>
+      <div class="admin">
+        <img src="./dr.jpg" alt="Sarah Johnson" class="admin-img" />
+        <h3>Dr. Sarah Thompson</h3>
+        <h3>Administrator</h3>
+      </div>
+    </header>
+    <main class="main">
+      <div class="cards">
+        <section class="card">
+          <h3>Total Patients</h3>
+          <h3>152</h3>
+        </section>
+        <section class="card">
+          <h3>New Patients Today</h3>
+          <h3>12</h3>
+        </section>
+        <section class="card">
+          <h3>Critical Cases</h3>
+          <h3>4</h3>
+        </section>
+        <section class="card">
+          <h3>Scheduled Surgeries</h3>
+          <h3>3</h3>
+        </section>
+      </div>
+      <div class="table">
+        <table>
+          <caption>
+            Today’s Appointments
+          </caption>
+          <thead>
+            <tr>
+              <th>Patient Name</th>
+              <th>Doctor</th>
+              <th>Time</th>
+              <th>Department</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Emma Johnson</td>
+              <td>Dr. Collins</td>
+              <td>09:00</td>
+              <td>Cardiology</td>
+              <td>Approved</td>
+            </tr>
+            <tr>
+              <td>Michael Brown</td>
+              <td>Dr. Smith</td>
+              <td>10:30</td>
+              <td>Neurology</td>
+              <td>Pending</td>
+            </tr>
+            <tr>
+              <td>Laura White</td>
+              <td>Dr. Lee</td>
+              <td>12:00</td>
+              <td>Orthopedics</td>
+              <td>Completed</td>
+            </tr>
+            <tr>
+              <td>Daniel Carter</td>
+              <td>Dr. Davis</td>
+              <td>13:15</td>
+              <td>Pediatrics</td>
+              <td>Approved</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="dr-patient">
+        <section class="drs">
+          <h3>Top Doctors</h3>
+          <div>
+            <h4>Name: Dr. Emily Carter</h4>
+            <h4>Specialty: Cardiologist</h4>
+            <h4>Rating: ⭐ 4.9</h4>
+          </div>
+          <div>
+            <h4>Name: Dr. Daniel Lee</h4>
+            <h4>Specialty: Orthopedic Surgeon</h4>
+            <h4>Rating: ⭐ 4.8</h4>
+          </div>
+          <div>
+            <h4>Name: Dr. Michael Smith</h4>
+            <h4>Specialty: Neurologist</h4>
+            <h4>Rating: ⭐ 4.7</h4>
+          </div>
+        </section>
+        <section>
+          <h3>Patient Profile</h3>
+          <div>
+            <img src="./patient.jpg" alt="" />
+            <h4>Name: Jonathan Miller</h4>
+            <h4>Age: 54</h4>
+            <h4>Condition: Hypertension</h4>
+            <h4>Last Visit: 2026/04/18</h4>
+            <h4>Status: Under Treatment</h4>
+          </div>
+        </section>
+      </div>
+    </main>
+  </body>
+</html>

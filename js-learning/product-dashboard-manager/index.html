@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <main>
+      <h1>Product Dashboard</h1>
+      <form action="#">
+        <div>
+          <h2>Product's Detail</h2>
+          <label for="name">Name</label>
+          <input type="text" name="name" id="name" />
+          <label for="price">Price</label>
+          <input type="text" name="price" id="price" />
+          <label for="category">Category</label>
+          <input type="text" name="category" id="category" />
+          <label for="describe">Description</label>
+          <textarea name="describe" id="describe"></textarea>
+          <button type="submit">Add Product</button>
+        </div>
+        <div>
+          <select name="sort" id="sort">
+            <option value="" selected>Sort</option>
+            <option value="lth">price low to high</option>
+            <option value="htl">price high to low</option>
+            <option value="newest">newest</option>
+          </select>
+        </div>
+      </form>
+      <div>
+        <h2>total products</h2>
+        <p class="total-products"></p>
+        <h2>total price</h2>
+        <p class="total-price"></p>
+        <h2>average price</h2>
+        <p class="average-price"></p>
+        <h2>most expensive</h2>
+        <p class="most-expensive"></p>
+        <h2>cheapest</h2>
+        <p class="cheapest"></p>
+      </div>
+      <div id="search-box">
+        <input
+          type="text"
+          name="search"
+          id="search"
+          placeholder="search product..."
+        />
+        <button id="disabled-delete" type="button">Disabled Delete</button>
+        <button id="reload-page" type="button">Reload Page</button>
+      </div>
+      <div class="container"></div>
+    </main>
+  </body>
+</html>

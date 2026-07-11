@@ -1,0 +1,74 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: sans-serif;
+    background: #3f37ce40;
+}
+input,textarea,select,button {
+    font-family: inherit;
+    font-size: 16px;
+}
+/* start form styles */
+#form-container {
+    background: white;
+    width: 500px;
+    margin: 20px auto;
+    border-radius: 16px;
+    padding: 20px 28px;
+    box-shadow: 0 12px 24px #00000014;
+}
+#form-container .form-title {
+    text-align: center;
+    margin-bottom: 24px;
+}
+#form-container label {
+    display: block;
+    margin-bottom: 6px;
+}
+/* input styles */
+#form-container .input-box {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #d1d5db;
+    margin-bottom: 16px;
+    outline: none;
+}
+#form-container .textarea-box {
+    resize: none;
+}
+#form-container .input-box:focus {
+    border-color: #6366f1;
+}
+/* change color of placeholder inputs */
+#form-container .input-box::placeholder {
+    color: #a2a2a2;
+}
+/* radio button styles */
+#form-container .radio-group {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin-bottom: 6px;
+}
+#form-container .radio-group {
+    color: #4b5563;
+}
+/* register button styles */
+#form-container .register-btn {
+    background: #6366f1;
+    color: white;
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+#form-container .register-btn:hover {
+    background: #4f46e5;
+}

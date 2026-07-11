@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashbord</title>
+    <link rel="shortcut icon" href="./favicon.jpg" type="image/jpg" />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div>
+        <h1>Task Manager</h1>
+      </div>
+      <nav class="navbar">
+        <a href="#" class="nav-item">Dashboard</a>
+        <a href="#" class="nav-item">Projects</a>
+        <a href="#" class="nav-item">Settings</a>
+      </nav>
+      <div class="prof">
+        <img src="./alex-morgan.jpg" alt="Alex Morgan" class="prof-img" />
+        <h3 class="name">Alex Morgan</h3>
+      </div>
+    </header>
+    <main class="main">
+      <div class="main-cards">
+        <h2>KPI Cards</h2>
+        <div class="kpi">
+          <section class="card">
+            <h3>Completed Tasks</h3>
+            <b>128</b>
+            <p>Tasks finished this month</p>
+          </section>
+          <section class="card">
+            <h3>Ongoing Projects</h3>
+            <b>6</b>
+            <p>Projects currently active</p>
+          </section>
+          <section class="card">
+            <h3>Upcoming Deadlines</h3>
+            <b>4</b>
+            <p>Due within 7 days</p>
+          </section>
+        </div>
+      </div>
+      <div class="table">
+          <h2 class="table-title">Active Projects</h2>
+        <table>
+         <thead>
+             <tr>
+            <th>Project Name</th>
+            <th>Status</th>
+            <th>Due Date</th>
+            <th>Progress</th>
+          </tr>
+         </thead>
+          <tbody>
+            <tr>
+            <td>Website Redesign</td>
+            <td class="ongoing">Ongoing</td>
+            <td>May 20, 2026</td>
+            <td>65%</td>
+          </tr>
+          <tr>
+            <td>Mobile App UI</td>
+            <td class="stuck">Stuck</td>
+            <td>May 14, 2026</td>
+            <td>40%</td>
+          </tr>
+          <tr>
+            <td>Marketing Dashboard</td>
+            <td class="completed">Completed</td>
+            <td>May 2, 2026</td>
+            <td>100%</td>
+          </tr>
+          <tr>
+            <td>CRM Integration</td>
+            <td class="ongoing">Ongoing</td>
+            <td>May 28, 2026</td>
+            <td>55%</td>
+          </tr>
+          <tr>
+            <td>Landing Page Update</td>
+            <td class="completed">Completed</td>
+            <td>April 30, 2026</td>
+            <td>100%</td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="quick-task">
+        <h2>Create New Task</h2>
+        <form action="#" class="form">
+          <label for="task">Task Title</label>
+          <input
+            type="text"
+            name="task"
+            id="task"
+            placeholder="Enter task title"
+            required
+          />
+          <label for="category">Category</label>
+          <select name="category" id="category">
+            <option value="" class="option" disabled selected>
+              Options
+            </option>
+            <option value="Design" class="option">Design</option>
+            <option value="Development" class="option">Development</option>
+            <option value="Marketing" class="option">Marketing</option>
+            <option value="Research" class="option">Research</option>
+          </select>
+          <label for="date">Deadline</label>
+          <input type="date" name="date" id="date" required />
+          <button type="submit" class="btn">Add Task</button>
+        </form>
+      </div>
+    </main>
+    <footer class="footer">
+      <p>Task Manager Dashboard</p>
+      <p>&copy; Designed by Mehrd Sodagari</p>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,110 @@
+* {
+    padding: 0;
+    margin: 0;
+    direction: rtl;
+    font-family: vazirmatn;
+}
+/* start header style */
+#header .header-text{
+    background: darkmagenta;
+    color: whitesmoke;
+    padding: 10px;
+}
+#header .header-text .logo-pic {
+    width: 200px;
+    height: auto;
+    padding: 10px 0;
+}
+#header .nav-list {
+    background: rgb(239, 164, 176);
+    list-style-type: none;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 150px;
+}
+#header .nav-list .nav-item{
+    text-decoration: none;
+    color: black;
+}
+/* start main style */
+#main {
+    background: rgb(224, 25, 224);
+    padding: 15px;
+}
+#main .main-title {
+    color: whitesmoke;
+    /* float: left;
+    width: 90%; */
+}
+#main .articles-list {
+    display: flex;
+    gap: 20px;
+    float: left;
+    width: 90%;
+    padding-bottom: 20px;
+}
+#main .articles-list .article {
+    background: lightgray;
+    padding: 10px;
+    border-radius: 10px;
+}
+#main .articles-list .article img {
+    width: 100px;
+    height: auto;
+}
+#main .articles-list .article .article-hyperlink {
+    text-decoration: none;
+    padding: 10px;
+    color: whitesmoke;
+}
+#main .articles-list .article .article-button {
+    background: rgb(204, 107, 204);
+    border: 2px solid black;
+    border-radius: 3px;
+}
+#main .main-table {
+    border-collapse: collapse;
+    width: 100%;
+}
+#main .main-table .table-caption {
+    border-top: 2px solid white;
+    padding: 15px 0;
+}
+#main .main-table th,td {
+    border: 2px solid lightskyblue;
+    text-align: center;
+    padding: 8px;
+    color: white;
+}
+#main .ad {
+    float: right;
+    width: 10%;
+}
+#main .ad .ad-title {
+    color: white;
+}
+#main .ad .ad-list {
+    list-style-type: none;
+}
+#main .ad .ad-hyperlink {
+    text-decoration: none;
+    color: whitesmoke;
+}
+/* start footer */
+#footer {
+    background: darkmagenta;
+    height: 200px;
+    text-align: center;
+    color: wheat;
+}
+#footer .via {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 65px 0;
+}
+#footer .via .social-media {
+    text-decoration: none;
+    list-style-type: none;
+}

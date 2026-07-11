@@ -1,0 +1,19 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    height: 100vh;
+    background-image: radial-gradient(rgba(205, 10, 10, 0.3),rgba(205, 10, 10, 0.6)) , url("./4k-astronaut-with-planet-balloons-obmeigwjtm09atxj.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    color: white;
+    padding: 20px;
+}
+.btn {
+    margin: 10px 0;
+    padding: 5px;
+    border-radius: 10px;
+}

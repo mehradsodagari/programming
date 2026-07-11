@@ -1,0 +1,39 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background: purple;
+}
+#main {
+  background: pink;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 24px auto;
+  padding: 16px;
+  border-radius: 8px;
+  width: 500px;
+  height: 200px;
+  line-height: 2.5;
+}
+#counter {
+  color: black;
+  font-weight: bold;
+}
+.btn {
+  padding: 8px 16px;
+  border: none;
+}
+.start {
+  background: rgba(0, 196, 0, 0.5);
+}
+.pause {
+  background: rgba(255, 85, 0, 0.7);
+}
+.reset {
+  background: rgba(0, 149, 255, 0.562);
+}

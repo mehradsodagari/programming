@@ -1,0 +1,34 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: sans-serif;
+}
+#form {
+    background-image: linear-gradient(60deg,lightblue,yellow,lightgreen);
+    width: 350px;
+    height: 350px;
+    margin: 100px auto;
+    padding: 10px;
+    border-radius: 20px;
+    text-align: center;
+    padding: 20px;
+}
+#form .enter {
+    display: block;
+    padding: 10px;
+    width: 100%;
+    margin: 50px auto;
+    border-radius: 10px;
+    border: none;
+}
+#form .submit-btn {
+    border-radius: 10px;
+    border: none;
+    background-image: linear-gradient(red,purple,blue);
+    width: 100%;
+    padding: 10px;
+    color: white;
+}

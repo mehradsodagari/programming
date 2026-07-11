@@ -1,0 +1,236 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: sans-serif;
+}
+/* start header */
+.header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 10px;
+  background: linear-gradient(to right, skyblue, blue);
+  color: whitesmoke;
+}
+.header .header-bar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+.header .about-menu {
+  display: flex;
+  flex-direction: column;
+}
+.header #menu-toggle {
+  display: none;
+}
+.header .menu-toggle-txt {
+  cursor: pointer;
+}
+.header #menu-toggle:checked ~ .menu-list {
+  opacity: 1;
+  visibility: visible;
+  max-height: 330px;
+}
+.header .menu-list {
+  max-height: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.921);
+  opacity: 0;
+  visibility: hidden;
+  border-radius: 10px;
+  margin-top: 10px;
+  transition: all 0.3s;
+}
+.header .menu-list .menu-item {
+  text-decoration: none;
+  color: black;
+  width: 100%;
+  text-align: center;
+  padding: 10px;
+  border-bottom: 1px solid #f5f5f5;
+}
+.header .menu-list .menu-item:last-child {
+  border-bottom: none;
+}
+.header .menu-list .menu-item:hover {
+  background: #f4f4f4;
+  color: rgba(76, 0, 255, 0.476);
+  border: 1px solid rgb(218, 135, 235);
+}
+.header .menu-list .menu-item:first-child:hover {
+  border-radius: 10px 10px 0 0;
+}
+.header .menu-list .menu-item:last-child:hover {
+  border-radius: 0 0 10px 10px;
+}
+.header .header-bar .title {
+  text-shadow: 4px 4px 5px rgba(0, 0, 0, 1);
+}
+.header .header-bar .title-describe {
+  font-size: 14px;
+}
+.header .search-box-div .search-box {
+  margin: 10px;
+  padding: 7px 14px;
+  border: none;
+  border-radius: 8px;
+  transition: all 0.2s;
+}
+.header .search-box-div .search-box:focus {
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.25);
+  outline: 1px solid grey;
+}
+.header .about-administor {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+.header .about-administor .admin-img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  transition: all 0.3s;
+}
+.header .about-administor .admin-img:hover {
+  transform: scale(1.1);
+}
+/* start main */
+.main {
+  min-height: 100vh;
+  background-image: linear-gradient(135deg, lightgray, gray);
+}
+.main .cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  padding: 30px 10px;
+}
+.main .cards .card {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  background: rgba(222, 0, 222, 0.589);
+  color: rgb(228, 228, 228);
+  padding: 20px;
+  width: 180px;
+  height: 250px;
+  line-height: 1.5;
+  border-radius: 10px;
+  transition: all 0.3s;
+}
+.main .cards .card:hover {
+  box-shadow:
+    2px 2px 8px rgba(0, 0, 0, 0.3),
+    inset 2px 2px 8px rgba(0, 0, 0, 0.3);
+  border: 1.5px solid red;
+}
+.main .cards .card strong:first-of-type {
+  padding-bottom: 30px;
+}
+.main .cards .card strong:last-of-type {
+  padding-top: 30px;
+}
+.main .about-table {
+  padding: 20px;
+  border-top: 1px dashed black;
+}
+.main .about-table .table-title {
+  text-align: center;
+  padding-bottom: 5px;
+}
+.main .about-table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.main .about-table th,
+.main .about-table td {
+  border: 1px solid black;
+  padding: 7px;
+  text-align: center;
+}
+.main .about-table .delivered {
+  color: green;
+}
+.main .about-table .pending {
+  color: orange;
+}
+.main .about-table .in-progress {
+  color: blue;
+}
+.main .about-table .canceled {
+  color: red;
+}
+.main .top-products {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+.main .title-top {
+  text-align: center;
+  border-top: 1px dashed black;
+  padding: 20px;
+  margin-top: 10px;
+}
+.main .top-products .product {
+  background: skyblue;
+  width: 200px;
+  height: 250px;
+  border-radius: 10px;
+  padding: 15px;
+  text-align: center;
+  line-height: 25px;
+  transition: all 0.4s;
+}
+.main .top-products .product:hover {
+  transform: scale(1.05);
+  background: rgb(106, 193, 227);
+  box-shadow: 0 0 8px rgba(0, 0, 255, 0.61);
+}
+.main .top-products .product:hover > img {
+  transform: scale(1.1);
+}
+.main .top-products .product img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  transition: all 0.4s;
+}
+.main .overview {
+  margin-top: 10px;
+  padding: 20px;
+  border-top: 1px dashed black;
+}
+/* start footer */
+.footer {
+  background: linear-gradient(to right, skyblue, blue);
+  height: 150px;
+  text-align: center;
+  font-weight: bold;
+  line-height: 2.5;
+  padding: 20px;
+  color: whitesmoke;
+}
+/* my mistakes */
+/* use min-height instead of height */
+/* use hover for tr */
+/* use 8px or 16px or 24px or 32px instead random space like 5px,10px or 15px */

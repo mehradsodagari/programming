@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Habit Tracker</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div>
+        <h1>Habit Tracker</h1>
+        <p class="title-describe">Build better routines, one day at a time</p>
+      </div>
+      <div class="search-box-div">
+        <form action="#">
+          <input
+            type="text"
+            name="search"
+            id="search"
+            placeholder="Search habit..."
+            class="search-box"
+          />
+          <button type="submit" class="search-btn">Search</button>
+        </form>
+      </div>
+      <div class="manager-prof">
+        <img src="./manager.jpg" alt="Melissa Reed" class="manager-img" />
+        <h3>Melissa Reed</h3>
+      </div>
+    </header>
+    <main class="main">
+      <div class="today">
+        <h2 class="title">Today's Overview</h2>
+        <div class="overview-cards">
+          <section class="overview-card">
+            <strong>Completed Habits</strong>
+            <b>4 / 7</b>
+          </section>
+          <section class="overview-card">
+            <strong>Active Streak</strong>
+            <b>12 Days</b>
+          </section>
+          <section class="overview-card">
+            <strong>Daily Goal</strong>
+            <b>70%</b>
+          </section>
+        </div>
+      </div>
+      <div class="habit-list">
+        <h2 class="title">Habit List</h2>
+        <div class="cards">
+          <section class="card">
+            <h3>Morning Stretch</h3>
+            <p>Health</p>
+            <div class="progress-bar">
+              <div class="one"></div>
+            </div>
+            <p>✔ ❌ ✔ ✔ ✔ ❌ ✔</p>
+          </section>
+          <section class="card">
+            <h3>Reading</h3>
+            <p>Education</p>
+            <div class="progress-bar">
+              <div class="two"></div>
+            </div>
+            <p>✔ ✔ ❌ ✔ ❌ ❌ ✔</p>
+          </section>
+          <section class="card">
+            <h3>Drinking Water</h3>
+            <p>Wellness</p>
+            <div class="progress-bar">
+              <div class="three"></div>
+            </div>
+            <p>✔ ✔ ✔ ❌ ✔ ✔ ✔</p>
+          </section>
+        </div>
+      </div>
+      <div class="weekly">
+        <h2 class="title">Weekly Summary</h2>
+        <section class="week-info">
+          <h3>This Week: 27 Jan – 2 Feb</h3>
+          <p>Total Habits: 7</p>
+          <p>Completed: 28</p>
+          <p>Success Rate: 82%</p>
+        </section>
+      </div>
+    </main>
+    <footer class="footer">
+      <p>Habit Tracker</p>
+      <p>2026 – Personal Productivity UI</p>
+      <p>&copy;Mehrad Sodagari</p>
+    </footer>
+  </body>
+</html>

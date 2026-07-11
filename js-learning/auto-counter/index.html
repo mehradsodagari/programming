@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let counter = 0
+        let timer = null
+        document.addEventListener("DOMContentLoaded",() => {
+            document.querySelector("h1").textContent = counter
+        })
+        function start() {
+            timer = setInterval(() => {
+                counter++
+                document.querySelector("h1").textContent = counter
+            },1000)
+        }
+        function pause() {
+            clearInterval(timer)
+            timer = null
+        }
+    </script>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div id="main">
+        <h1>0</h1>
+    <div class="buttons">
+        <button onclick="start()">Start</button>
+        <button onclick="pause()">Stop</button>
+    </div>
+    </div>
+</body>
+</html>

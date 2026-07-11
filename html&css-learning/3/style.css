@@ -1,0 +1,115 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+html {
+    direction: rtl;
+}
+body {
+    font-family: Vazirmatn;
+    background: darkslateblue;
+}
+ul {
+    list-style-type: none;
+    padding-right: 0;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+img {
+    width: 100%;
+}
+/* header styles */
+#header {
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 50px;
+    margin: 20px;
+    padding: 10px 20px;
+}
+/* logo */
+#header .logo-link {
+    line-height: 0;
+}
+#header .logo-link .logo-img {
+    width: 60px;
+}
+/* header list */
+#header .navbar-list {
+    display: flex;
+    gap: 30px;
+}
+/* contact link */
+#header .header-contact-link {
+    background: darkslateblue;
+    color: white;
+    padding: 7px 13px;
+    border-radius: 10px;
+}
+/* products list styles */
+.menu-list {
+    display: flex;
+    gap: 20px;
+    justify-content: space-around;
+    margin: 80px 40px;
+    flex-wrap: wrap;
+}
+.menu-list .menu-item {
+    background: #ffffff2c;
+    border-radius: 18px;
+    width: 29%;
+    color: white;
+    padding: 20px;
+}
+.menu-list .menu-item .menu-img {
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+    margin: 0 auto;
+    display: block;
+}
+.menu-list .menu-item .menu-title {
+    border-top: 1px solid white;
+    padding-top: 15px;
+    margin-bottom: 10px;
+}
+.menu-list .menu-item .menu-info-box {
+    display: flex;
+    justify-content: space-between;
+}
+.menu-list .menu-item .menu-info-box .order-link {
+    color: black;
+    background: white;
+    padding: 5px 10px;
+    border-radius: 10px;
+}
+/* footer styles */
+#footer {
+    background: white;
+    padding: 25px;
+    padding-top: 40px;
+}
+#footer .footer-info-box {
+    display: flex;
+    gap: 80px;
+    align-items: center;
+}
+#footer .footer-info-box .footer-section {
+    width: 50%;;
+}
+#footer .footer-info-box .footer-title {
+    margin-bottom: 10px;
+}
+#footer .footer-info-box .footer-text {
+    line-height: 35px;
+}
+#footer .footer-info-box .footer-section .footer-link {
+    margin-bottom: 10px;
+}
+#footer .footer-copyright {
+    text-align: center;
+    margin-top: 40px;
+}

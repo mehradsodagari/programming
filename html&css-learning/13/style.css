@@ -1,0 +1,146 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: vazirmatn;
+  direction: rtl;
+}
+/* start header */
+#header {
+  background: rgb(11, 96, 207);
+  padding: 20px;
+  color: white;
+}
+#header .navbar-list {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 0px;
+}
+#header .navbar-list .nav-link {
+  text-decoration: none;
+  color: white;
+}
+#header .navbar-list .nav-link:hover {
+  color: white;
+  padding: 10px;
+  background: rgb(13, 64, 130);
+  border-radius: 20px;
+  transition: all 0.2s;
+}
+/* start main */
+#main {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3)), url("./rasht.webp");
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  padding: 20px;
+  color: whitesmoke;
+}
+#main .city-details {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px;
+}
+#main .tourist-attractions {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 30px;
+}
+#main .tourist-attractions .tourist-attraction {
+  background: #08aae5;
+  padding: 15px;
+  width: 500px;
+  height: 400px;
+  border-radius: 20px;
+}
+#main .tourist-attractions .tourist-attraction:hover {
+  background: rgb(30, 79, 201);
+  transition: all 0.3s;
+}
+#main .tourist-attractions .tourist-attraction:hover img {
+  width: 250px;
+  transition: all 0.3s;
+}
+#main .tourist-attractions .tourist-attraction-pic {
+  width: 200px;
+}
+#main .tourist-attractions .tourist-attraction-link {
+  text-decoration: none;
+  color: black;
+}
+#main .foods-div {
+  padding: 20px;
+}
+#main .tourism-info {
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 10px;
+}
+#main .tourism-info th,
+td {
+  border: 2px solid rgb(11, 96, 207);
+  text-align: center;
+  padding: 10px;
+  border-radius: 10px;
+}
+#main.video-title {
+  padding-top: 10px;
+}
+#main .video-div {
+  width: 300px;
+  display: block;
+  margin: 0 auto;
+}
+#main .form-tour-leader label {
+  display: block;
+  padding: 10px;
+}
+#main .form-tour-leader select {
+  display: block;
+  margin-top: 10px;
+}
+#main .form-tour-leader input {
+  padding: 7px;
+}
+#main .form-tour-leader textarea {
+  width: 300px;
+  height: 150px;
+  resize: none;
+}
+#main .form-tour-leader .form-btn {
+  display: block;
+  padding: 10px 20px;
+  margin-top: 10px;
+  background: lightblue;
+  color: gray;
+  border: none;
+  font-weight: bold;
+  font-family: vazirmatn;
+  border-radius: 10px;
+}
+#main .form-tour-leader .form-btn:hover {
+  background: blue;
+  color: whitesmoke;
+  transition: all 0.3s;
+  padding: 12px 23px;
+}
+/* start footer */
+#footer {
+  background: rgb(11, 96, 207);
+  height: 200px;
+  padding: 20px;
+  text-align: center;
+}
+/* my mistakes */
+/* #main.video-title => #main .video-title */
+/* border-radius on table */
+/* #main .tourism-info th,td => #main .tourism-info th,
+#main .tourism-info td
+ */

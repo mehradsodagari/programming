@@ -1,0 +1,76 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+/* start the css for heading */
+.header {
+    background: #2c3e50;
+    color: white;
+    padding: 20px;
+    display: block;
+}
+.header .hyperlink {
+    text-decoration: none;
+    color: #333; /* color : white ; */
+}
+.header .unorder-list {
+    list-style: none;
+}
+.header .unorder-list .list-item {
+    display: inline;
+     padding: 200px; /* my bad : use margin: 0 150px ; instead of padding */
+/* start the css for main */
+}
+.main {
+    width: 100%;
+}
+.main .writer {
+    float: right;
+    width: 250px;
+    background: #ecf0f1;
+    padding: 15px;
+    border: apx solid #bdc3c7; /* my bad : 1px */
+}
+.main .article{
+    float: left;
+    width: 70%;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+.main .article .txt {
+    font-family: Vazirmatn;
+}
+.main .article .pic {
+    width: 2500px;
+    height: auto;
+}
+/* my bad :  
+.main .article .pic {
+    width: 100%;
+    text-align: center;
+} 
+figure img {
+width: 300px ;    
+*/
+.main .article .bookstore {
+    width: 100%;
+    border-collapse: collapse;
+}
+.main .article .bookstore th,td{
+    border: 1px solid gray;
+    text-align: center;
+    padding: 10px;
+}
+/* start the css for footer */
+.footer {
+    background: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    margin-top: 20px;
+}
+.footer .footer-hyperlink {
+    text-decoration: none;
+    color: #21bab2;
+    padding: 8px;
+}

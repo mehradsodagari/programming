@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="fa-IR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>صفحه ثبت نام</title>
+    <link rel="shortcut icon" href="./favicon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <!-- start header -->
+    <header id="header">
+      <h1>اردو کویرگردی پاییز 1405</h1>
+      <p class="header-description">
+        در این اردو شما می توانید زندگی در دل کویر را تجربه کنید و از تماشای
+        ستارگان در تاریکی شب لذت ببرید
+      </p>
+      <a href="#" class="header-btn">مشاهده اطلاعات اردو</a>
+    </header>
+    <!-- start main -->
+    <main id="main">
+      <form action="#">
+        <fieldset class="main-fields">
+          <legend>اطلاعات فردی</legend>
+          <div class="field-div">
+            <div>
+              <label for="fullname">نام و نام خانوادگی</label>
+              <input type="text" name="fullname" id="fullname" />
+            </div>
+            <div>
+              <label for="phonenumber">شماره تماس</label>
+              <input type="tel" name="phonenumber" id="phonenumber" />
+            </div>
+          </div>
+          <div class="field-div">
+            <div>
+              <label for="email">ایمیل</label>
+              <input type="email" name="email" id="email" />
+            </div>
+            <div>
+              <label for="birthday">تاریخ تولد</label>
+              <input type="date" name="birthday" id="birthday" />
+            </div>
+          </div>
+          <div class="field-div exception-div">
+            <div>
+              <p>جنسیت</p>
+              <input type="radio" name="gender" value="male" class="radio" />
+              مرد
+              <input type="radio" name="gender" value="female" class="radio" />
+              زن
+              <input type="radio" name="gender" value="other" class="radio" />
+              غیره
+            </div>
+          </div>
+        </fieldset>
+        <fieldset class="main-fields">
+          <legend>تنظیمات اردو</legend>
+          <div class="field-div">
+            <div>
+              <p>نوع غذا</p>
+              <input type="radio" name="food" id="meat" class="radio" /> گوشتی
+              <input type="radio" name="food" id="vegetarian" class="radio" />
+              گیاهی
+            </div>
+            <div>
+              <select name="size" id="size">
+                <option value="" selected disabled>سایز تی شرت</option>
+                <option value="s">S</option>
+                <option value="m">M</option>
+                <option value="l">L</option>
+                <option value="xl">XL</option>
+              </select>
+            </div>
+          </div>
+          <div class="field-div">
+            <div>
+              <select name="day" id="day">
+                <option value="" selected disabled>روز حرکت</option>
+                <option value="1405/07/01">1405/07/01</option>
+                <option value="1405/08/01">1405/08/01</option>
+                <option value="1405/09/01">1405/09/01</option>
+              </select>
+            </div>
+            <div>
+              <p>نوع تور</p>
+              <input type="radio" name="tour-type" value="vip" class="radio" />
+              VIP
+              <input
+                type="radio"
+                name="tour-type"
+                value="standard"
+                class="radio"
+              />
+              Standard
+              <input
+                type="radio"
+                name="tour-type"
+                value="basic"
+                class="radio"
+              />
+              Basic
+            </div>
+          </div>
+        </fieldset>
+        <fieldset class="main-fields">
+          <legend>اطلاعات تکمیلی و ارسال</legend>
+          <div>
+            <textarea
+              name="more-info"
+              id="more-info"
+              placeholder="توضیحات بیشتر"
+              class="more-info"
+            ></textarea>
+          </div>
+          <div>
+            <label
+              ><input type="checkbox" name="agree-rules" required />تمام قوانین
+              را می پذیرم</label
+            >
+          </div>
+          <button type="submit" class="submit-btn">ثبت نام</button>
+          <button type="reset" class="reset-btn">پاک کردن اطلاعات</button>
+        </fieldset>
+      </form>
+    </main>
+    <!-- start footer class -->
+    <footer id="footer">
+      <a href="#" class="footer-link">درباره برگزارکننده اردو👨🏻‍🦱</a>
+      <a href="#" class="footer-link">شماره تماس📞</a>
+      <a href="#" class="footer-link">لینک قوانین شرکت در اردو</a>
+      <p>CopyRight | Mehrad Sodagari&copy;</p>
+    </footer>
+  </body>
+</html>
+<!-- my mistakes -->
+<!-- use label for input:radio-->
+<!-- use label for select -->

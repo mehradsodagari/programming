@@ -1,0 +1,39 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+body {
+    background: lightpink;
+}
+#form {
+    background: white;
+    width: 500px;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 10px;
+}
+#form .form-title {
+    text-align: center;
+}
+#form .field {
+    margin: 20px 0;
+    border-radius: 5px;
+}
+#form .field *{
+    display: flex;
+    padding: 3px 5px;
+    margin: 3px 5px;
+}
+#form .btn {
+    background: rgb(61, 105, 227);
+    color: white;
+    border-radius: 5px;
+    width: 100%;
+    padding: 7px;
+    font-weight: bold;
+}
+#form .field .write-input {
+    width: 440px;
+}

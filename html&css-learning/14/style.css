@@ -1,0 +1,157 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  direction: rtl;
+  font-family: vazirmatn;
+}
+/* start header */
+#header {
+  background-image: linear-gradient(
+    to left,
+    rgba(255, 145, 0, 0.966),
+    rgb(255, 255, 0)
+  );
+  padding: 20px;
+  line-height: 45px;
+}
+#header .header-description {
+  font-weight: 250;
+}
+#header .header-btn {
+  text-decoration: none;
+  color: black;
+  outline: 2px solid red;
+  outline-offset: 5px;
+  margin-top: 100px;
+  border-radius: 3px;
+}
+#header .header-btn:focus {
+  background: red;
+  border: 2px solid white;
+  color: white;
+  outline: none;
+  padding: 7px;
+  border-radius: 15px;
+  transition: all 0.3s;
+  font-weight: bold;
+}
+/* start main */
+#main {
+  padding: 25px;
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.8)), url("./background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  height: 100vh;
+}
+#main .main-fields {
+  padding: 20px;
+  margin: 20px 0;
+  border: 2px dashed orange;
+  color: whitesmoke;
+  border-radius: 10px;
+}
+#main .main-fields .field-div {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px;
+}
+#main .main-fields .exception-div {
+  display: block;
+  padding-right: 250px;
+}
+#main .main-fields .more-info {
+  resize: none;
+  width: 300px;
+  height: 170px;
+  padding: 5px;
+}
+#main .main-fields .submit-btn {
+  background-image: linear-gradient(
+    to left,
+    rgba(255, 145, 0, 0.966),
+    rgb(255, 255, 0)
+  );
+  padding: 10px 15px;
+  border-radius: 10px 0 10px 0;
+  border: 2px solid green;
+  margin: 10px;
+}
+#main .main-fields .submit-btn:hover {
+  background-image: linear-gradient(to right, rgb(240, 5, 5), rgb(255, 150, 2));
+  padding: 15px 20px;
+  border-radius: 0 10px 0 10px;
+  border: 3px solid rgb(3, 87, 3);
+  margin: 10px;
+  transition: all 0.2s;
+  color: whitesmoke;
+}
+#main .main-fields .reset-btn {
+  background-image: linear-gradient(
+    to left,
+    rgba(255, 145, 0, 0.966),
+    rgb(255, 255, 0)
+  );
+  padding: 10px 15px;
+  border-radius: 10px 0 10px 0;
+  border: 2px solid red;
+  margin: 10px;
+}
+#main .main-fields .reset-btn:hover {
+  background-image: linear-gradient(to right, rgb(240, 5, 5), rgb(255, 150, 2));
+  padding: 15px 20px;
+  border-radius: 0 10px 0 10px;
+  border: 3px solid rgb(192, 0, 0);
+  margin: 10px;
+  transition: all 0.2s;
+  color: whitesmoke;
+}
+#main .radio {
+  accent-color: orangered;
+}
+legend {
+  padding: 0 5px;
+}
+input,
+select,
+textarea {
+  background-image: linear-gradient(
+    to right,
+    rgba(255, 187, 99, 0.966),
+    rgb(244, 244, 145)
+  );
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid red;
+}
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  box-shadow: 0 0 10px rgb(151, 0, 0);
+}
+/* start footer */
+#footer {
+  background-image: linear-gradient(
+    to left,
+    rgba(255, 145, 0, 0.966),
+    rgb(255, 255, 0)
+  );
+  padding: 20px;
+  height: 220px;
+  text-align: center;
+}
+#footer .footer-link {
+  display: block;
+  text-decoration: none;
+  color: black;
+  padding: 10px;
+}
+/* my mistakes */
+/* use min-height: 100vh; instead of height: 100vh; */
+/* padding-right: 250px; ❌ */
+/* use transition for ordinary tags , not hover */
+/* doesn't use padding in hover */

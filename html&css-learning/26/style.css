@@ -1,0 +1,242 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: sans-serif, arial;
+}
+input,
+textarea,
+option,
+datalist {
+  font-family: sans-serif, arial;
+}
+a {
+  text-decoration: none;
+}
+.header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  background: linear-gradient(135deg, rgb(0, 0, 255), rgb(0, 0, 95));
+  padding: 12px;
+  color: whitesmoke;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+.header .navbar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 32px;
+  padding: 12px 0;
+}
+.header .navbar .nav-item {
+  color: white;
+  transition: all 0.2s;
+}
+.header .navbar .nav-item:hover {
+  outline: 1px solid white;
+  outline-offset: 8px;
+  border-radius: 4px;
+}
+.header .prof {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+.header .prof .prof-img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  transition: all 0.3s;
+}
+.header .prof .prof-img:hover {
+  transform: scale(1.4);
+}
+.header .prof .name {
+  transition: all 0.2s;
+  padding: 8px;
+}
+.header .prof .prof-img:hover + .name {
+  border-bottom: 1px solid white;
+}
+.main {
+  background: rgb(210, 210, 210);
+  padding: 12px;
+  max-width: 100dvw;
+}
+.main .main-cards {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  gap: 12px;
+  padding: 16px;
+  border: 1px dashed black;
+  margin: 16px 12px;
+  border-radius: 24px;
+}
+.main .main-cards .kpi {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  gap: 12px;
+}
+.main .main-cards .card {
+  padding: 12px;
+  background: lightskyblue;
+  line-height: 3;
+  margin: 0 24px;
+  width: 220px;
+  height: 200px;
+  border-radius: 8px;
+  transition: all 0.3s;
+}
+.main .main-cards .card:hover {
+  transform: scale(1.01);
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+  background: darkblue;
+  color: white;
+}
+.main .table {
+  padding: 16px;
+  border: 1px dashed black;
+  border-radius: 24px;
+  margin: 24px 12px;
+}
+.main .table .table-title {
+  padding: 12px 0;
+  text-align: center;
+}
+.main .table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.main .table th,
+.main .table td {
+  border: 1px solid rgb(0, 0, 114);
+  text-align: center;
+  padding: 8px;
+}
+.main .table tr {
+  transition: all 0.3s;
+}
+.main .table tr:hover {
+  background: gray;
+  color: white;
+  transform: scaleY(1.05);
+}
+.main .table .completed {
+  color: green;
+  font-weight: bold;
+}
+.main .table .stuck {
+  color: red;
+  font-weight: bold;
+}
+.main .table .ongoing {
+  color: blue;
+  font-weight: bold;
+}
+.main .quick-task {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px dashed black;
+  padding: 16px;
+  margin: 12px;
+  border-radius: 24px;
+}
+.main .quick-task .form {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 12px;
+  gap: 8px;
+}
+.main .form #task {
+  padding: 8px 16px;
+  border-radius: 8px;
+  border: 1px solid white;
+  background: linear-gradient(45deg, darkblue, rgb(0, 102, 255));
+  color: whitesmoke;
+  transition: all 0.2s;
+}
+.main .form #task::placeholder {
+  color: whitesmoke;
+}
+.main .form #category {
+  padding: 6px 12px;
+  border-radius: 8px;
+  border: 1px solid white;
+  background: linear-gradient(45deg, darkblue, rgb(0, 102, 255));
+  color: whitesmoke;
+  transition: all 0.2s;
+}
+.main .form .option {
+  color: rgba(137, 43, 226, 0.688);
+  background: rgba(211, 211, 211, 0.175);
+  font-weight: bold;
+}
+.main .form #date {
+  padding: 6px 12px;
+  border-radius: 8px;
+  background: linear-gradient(45deg, darkblue, rgb(0, 102, 255));
+  color: whitesmoke;
+  border: 1px solid white;
+  transition: all 0.2s;
+}
+.main .form .btn {
+  padding: 8px 12px;
+  border-radius: 8px 0 8px 0;
+  background: linear-gradient(to right, rgb(0, 0, 62), rgb(8, 119, 188));
+  border: 1px solid white;
+  color: whitesmoke;
+  font-weight: bold;
+  margin-top: 8px;
+  border: none;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s;
+}
+.main .form .btn:hover {
+  transform: scale(1.05);
+  border: 1px solid white;
+}
+.main .form .btn:focus {
+  transform: scale(0.9);
+  border-radius: 0 8px 0 8px;
+}
+.main .form #task:hover,
+.main .form #category:hover,
+.main .form #date:hover {
+  transform: scale(1.05);
+  box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.1);
+}
+.main .form #task:focus,
+.main .form #category:focus,
+.main .form #date:focus {
+  border: 2px solid white;
+  outline: none;
+}
+.footer {
+  background: linear-gradient(135deg, rgb(0, 0, 255), rgb(0, 0, 95));
+  padding: 12px;
+  color: white;
+  text-align: center;
+  line-height: 3;
+}

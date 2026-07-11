@@ -1,0 +1,203 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: sans-serif;
+}
+/* start header */
+.header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: normal;
+  padding: 15px;
+  background-image: linear-gradient(to left, skyblue, blue);
+  color: white;
+}
+.header .header-search {
+  padding: 4px 10px;
+  border-radius: 3px;
+  transition: all 0.3s;
+}
+.header .header-search:focus {
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.127);
+  outline: 1px solid rgb(105, 100, 100);
+  transform: scale(1.05);
+}
+.header .about-analyst {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.header .about-analyst .analyst-image {
+  border-radius: 50%;
+  width: 150px;
+  object-fit: cover;
+  transition: all 0.3s;
+}
+.header .about-analyst .analyst-image:hover {
+  transform: scale(1.07);
+  box-shadow: 0 0 10px rgba(91, 91, 91, 0.11);
+}
+/* start main */
+.main {
+  /* background: rgba(209, 209, 209, 0.921); */
+  background-image: linear-gradient(
+    to right,
+    rgb(215, 215, 215),
+    rgba(128, 128, 128, 0.887)
+  );
+  min-height: 100vh;
+  max-width: 100vw;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  min-height: 100vh;
+}
+.main .side-div {
+  width: 13%;
+  min-height: 100vh;
+}
+.main .side-div .side-bar {
+  background: white;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  height: 100%;
+}
+.main .side-div .side-bar .side-list {
+  list-style-type: none;
+}
+.main .side-div .side-bar .side-list .side-links {
+  text-decoration: none;
+  color: black;
+  line-height: 25px;
+  transition: all 0.25s;
+}
+.main .side-div .side-bar .side-list .side-links:hover {
+  text-shadow: 0 0 8px rgba(150, 148, 148, 0.743);
+}
+.main .side-div .side-bar .side-bar-title {
+  font-size: 20px;
+}
+.main .side-div .side-bar .side-bar-text {
+  font-size: 15px;
+}
+.main .main-div {
+  width: 85%;
+}
+.main .weather-cards {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  gap: 40px;
+  padding: 20px;
+}
+.main .weather-cards .two-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+}
+.main .weather-cards .two-cards .each-card {
+  width: 235px;
+  height: 245px;
+  border-radius: 10px;
+  line-height: 28px;
+  padding: 20px;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.373);
+  transition: all 0.3s;
+}
+.main .weather-cards .two-cards .each-card:hover {
+  transform: scale(1.05);
+  border: 2px solid black;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.106);
+}
+.main .weather-cards .two-cards .each-card.temp {
+  background: rgb(255, 217, 0);
+}
+.main .weather-cards .two-cards .each-card.wind {
+  background: rgb(255, 255, 255);
+}
+.main .weather-cards .two-cards .each-card.humid {
+  background: lightblue;
+}
+.main .weather-cards .two-cards .each-card.uv {
+  background: orangered;
+}
+.main .weather-cards .two-cards .each-card .card-icon {
+  padding-bottom: 30px;
+  text-align: center;
+}
+.main .week {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  gap: 40px;
+  padding: 20px;
+}
+.main .week .seven-days {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+}
+.main .week .week-title {
+  background: white;
+  width: 85%;
+  border-radius: 8px;
+  text-align: center;
+}
+.main .week .week-title .week-title-inner {
+  padding: 5px;
+}
+.main .week .seven-days .each-day {
+  width: 11.5%;
+  background-image: linear-gradient(135deg, lightblue, skyblue);
+  height: 150px;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: inset 0 0 7px blue;
+  transition: all 0.3s;
+}
+.main .week .seven-days .each-day:hover {
+  transform: scale(1.05);
+}
+.main .main-div .weather-summary {
+  padding: 15px 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  line-height: 25px;
+}
+.footer {
+  background: linear-gradient(to left, skyblue, blue);
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  line-height: 35px;
+  text-align: center;
+  color: white;
+  padding: 20px;
+}
+/* my mistakes */
+/* using a lot of static height , you should use min-height instead of height */
+/* use wieght with px for side bar , not % */
+/* four cards in one line , no two lines */
+/* shadows are heavy */

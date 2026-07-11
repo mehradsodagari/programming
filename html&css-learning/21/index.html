@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>E-Commerce Admin Dashboard</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="header-bar">
+        <div>
+          <h1 class="title">ShopMaster Admin</h1>
+          <p class="title-describe">E-commerce management panel</p>
+        </div>
+      </div>
+      <div class="search-box-div">
+        <form action="#">
+          <input
+            type="text"
+            name="search"
+            id="searchbox"
+            placeholder=" Search products, orders, users..."
+            class="search-box"
+          />
+        </form>
+      </div>
+      <div class="about-administor">
+        <div>
+          <h3>Isabella Roberts</h3>
+          <h3>Administrator</h3>
+        </div>
+        <div>
+          <img src="./admin.jpg" alt="Isabella Roberts" class="admin-img" />
+        </div>
+      </div>
+      <div class="about-menu">
+        <input type="checkbox" name="menu-toggle" id="menu-toggle" />
+        <label for="menu-toggle" class="menu-toggle-txt">📋 menu</label>
+        <div class="menu-list">
+          <a href="#" class="menu-item">Home</a>
+          <a href="#" class="menu-item">Products</a>
+          <a href="#" class="menu-item">Orders</a>
+          <a href="#" class="menu-item">Customers</a>
+          <a href="#" class="menu-item">Analytics</a>
+          <a href="#" class="menu-item">Discounts</a>
+          <a href="#" class="menu-item">Messages</a>
+          <a href="#" class="menu-item">Settings</a>
+        </div>
+      </div>
+    </header>
+    <main class="main">
+      <div class="cards">
+        <section class="card">
+          <h3>Total Sales</h3>
+          <strong>$12,450</strong>
+          <strong>Sales in the last 7 days</strong>
+        </section>
+        <section class="card">
+          <h3>Orders</h3>
+          <strong>328</strong>
+          <strong>Total orders this month</strong>
+        </section>
+        <section class="card">
+          <h3>Customers</h3>
+          <strong>1,284</strong>
+          <strong>Active registered users</strong>
+        </section>
+        <section class="card">
+          <h3>Refund Requests</h3>
+          <strong>5</strong>
+          <strong>Pending approval</strong>
+        </section>
+      </div>
+      <div class="about-table">
+        <h3 class="table-title">Orders Table</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>Order ID</th>
+              <th>Customer</th>
+              <th>Product</th>
+              <th>Amount</th>
+              <th>Status</th>
+              <th>Date</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>#1001</td>
+              <td>Sarah Johnson</td>
+              <td>Running Shoes</td>
+              <td>$120</td>
+              <td class="delivered">Delivered</td>
+              <td>Aug 14, 2026</td>
+            </tr>
+            <tr>
+              <td>#0994</td>
+              <td>David Lee</td>
+              <td>Wireless Mouse</td>
+              <td>$35</td>
+              <td class="pending">Pending</td>
+              <td>Aug 12, 2026</td>
+            </tr>
+            <tr>
+              <td>#0988</td>
+              <td>Emily Davis</td>
+              <td>Smartwatch</td>
+              <td>$199</td>
+              <td class="in-progress">In Progress</td>
+              <td>Aug 10, 2026</td>
+            </tr>
+            <tr>
+              <td>#0982</td>
+              <td>Michael Brown</td>
+              <td>Laptop Bag</td>
+              <td>$40</td>
+              <td class="canceled">Canceled</td>
+              <td>Aug 09, 2026</td>
+            </tr>
+            <tr>
+              <td>#0975</td>
+              <td>James Adams</td>
+              <td>Keyboard</td>
+              <td>$55</td>
+              <td>Delivered</td>
+              <td>Aug 07, 2026</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <h3 class="title-top">Top Selling Products</h3>
+      <div class="top-products">
+        <section class="product">
+          <img src="./running-shoes.jpg" alt="running shoes" />
+          <h4>Running Shoes</h4>
+          <p>$120</p>
+          <p>Sold: 652</p>
+        </section>
+        <section class="product">
+          <img src="./smartwatch.jpg" alt="smartwatch" />
+          <h4>Smartwatch</h4>
+          <p>$199</p>
+          <p>Sold: 488</p>
+        </section>
+        <section class="product">
+          <img src="./airbud.jpg" alt="wireless earbuds" />
+          <h4>Wireless Earbuds</h4>
+          <p>$79</p>
+          <p>Sold: 301</p>
+        </section>
+      </div>
+      <div class="overview">
+        <h3>Sales Overview</h3>
+        <p>
+          This panel provides a quick summary of recent store performance. Sales
+          have increased compared to last month, and user activity remains high.
+        </p>
+      </div>
+    </main>
+    <footer class="footer">
+      <p>ShopMaster Admin Panel</p>
+      <p>All rights reserved</p>
+      <p>&copy; 2026 ShopMaster Inc.</p>
+    </footer>
+  </body>
+</html>
