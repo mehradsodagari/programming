@@ -1,0 +1,9 @@
+.answer {
+  display: none;
+}
+.card.flipped .answer {
+  display: block;
+}
+.card.is-fav {
+  border: 2px solid gold;
+}

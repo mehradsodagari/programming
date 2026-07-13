@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="./app.js" defer></script>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <form action="">
+      <label for="q">Question</label>
+      <input type="text" name="q" id="q" />
+      <label for="a">Answer</label>
+      <textarea name="a" id="a"></textarea>
+      <select name="cat" id="cat">
+        <option value="" selected disabled>Category</option>
+        <option value="sport">Sport</option>
+        <option value="religion">Religion</option>
+        <option value="cinema">Cinema</option>
+        <option value="history">History</option>
+        <option value="geography">Geography</option>
+        <option value="math">Math</option>
+        <option value="physics">Physics</option>
+        <option value="chemistry">Chemistry</option>
+        <option value="programming">Programming</option>
+      </select>
+      <button type="submit" id="enter-btn">Enter</button>
+    </form>
+    <div id="container"></div>
+  </body>
+</html>
