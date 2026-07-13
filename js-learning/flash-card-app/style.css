@@ -1,3 +1,19 @@
+:root {
+  --space-s: 8px;
+  --space-m: 16px;
+  --space-l: 24px;
+  --space-xl: 32px;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+main {
+  background: rgba(230, 0, 230, 0.521);
+  height: 100vh;
+  padding: var(--space-xl);
+}
 .answer {
   display: none;
 }
@@ -6,4 +22,101 @@
 }
 .card.is-fav {
   border: 2px solid gold;
+}
+#main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: var(--space-m);
+  background: lightblue;
+  width: 400px;
+  margin: 0 auto;
+  border-radius: var(--space-l);
+}
+
+#search-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--space-m);
+  padding: var(--space-l);
+}
+form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: var(--space-l);
+}
+form div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 0;
+}
+form * {
+  margin: var(--space-s);
+}
+#search {
+  padding: var(--space-s) var(--space-m);
+  border-radius: var(--space-s);
+  border: none; 
+  transition: all 0.3s;
+}
+#search:focus {
+  outline: 1px solid black;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+}
+#topic {
+  padding: var(--space-s) var(--space-m);
+  border-radius: var(--space-s);
+  border: none;
+  transition: all 0.3s;
+}
+#topic:focus {
+  outline: 1px solid black;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+}
+#q {
+  padding: var(--space-s) var(--space-m);
+  border-radius: var(--space-s);
+  border: none;
+  transition: all 0.3s;
+}
+#q:focus {
+  outline: 1px solid black;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+}
+#a {
+  padding: var(--space-l) var(--space-xl);
+  border-radius: var(--space-s);
+  border: none;
+  resize: none;
+  transition: all 0.3s;
+}
+#a:focus {
+  outline: 1px solid black;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+}
+#cat {
+  padding: var(--space-s) var(--space-m);
+  border-radius: var(--space-s);
+  border: none;
+  transition: all 0.3s;
+}
+#cat:focus {
+  outline: 1px solid black;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+}
+#enter-btn {
+  padding: var(--space-s) var(--space-m);
+  border-radius: var(--space-s);
+  border: none;
+  transition: all 0.3s;
+}
+#enter-btn:hover {
+  background: lightpink;
+  transform: scale(1.1);
 }
