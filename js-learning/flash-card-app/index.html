@@ -9,53 +9,57 @@
   </head>
   <body>
     <main>
+      <button type="button" id="start">Start Study</button>
       <div id="main">
-      <div id="search-box">
-      <input
-      type="text"
-      name="search"
-      id="search"
-      placeholder="search in questions..."
-    />
-    <select name="" id="topic">
-      <option value="all">All</option>
-      <option value="sport">Sport</option>
-      <option value="religion">Religion</option>
-      <option value="cinema">Cinema</option>
-      <option value="history">History</option>
-      <option value="geography">Geography</option>
-      <option value="math">Math</option>
-      <option value="physics">Physics</option>
-      <option value="chemistry">Chemistry</option>
-      <option value="programming">Programming</option>
-    </select>
-    </div>
-    <form action="">
-      <div>
-        <label for="q">Question</label>
-      <input type="text" name="q" id="q" />
+        <div id="search-box">
+          <input
+            type="text"
+            name="search"
+            id="search"
+            placeholder="search in questions..."
+          />
+          <select name="" id="topic">
+            <option value="all">All</option>
+            <option value="sport">Sport</option>
+            <option value="religion">Religion</option>
+            <option value="cinema">Cinema</option>
+            <option value="history">History</option>
+            <option value="geography">Geography</option>
+            <option value="math">Math</option>
+            <option value="physics">Physics</option>
+            <option value="chemistry">Chemistry</option>
+            <option value="programming">Programming</option>
+          </select>
+        </div>
+        <form action="">
+          <div>
+            <label for="q">Question</label>
+            <input type="text" name="q" id="q" />
+          </div>
+          <div>
+            <label for="a">Answer</label>
+            <textarea name="a" id="a"></textarea>
+          </div>
+          <select name="cat" id="cat">
+            <option value="" selected disabled>Category</option>
+            <option value="sport">Sport</option>
+            <option value="religion">Religion</option>
+            <option value="cinema">Cinema</option>
+            <option value="history">History</option>
+            <option value="geography">Geography</option>
+            <option value="math">Math</option>
+            <option value="physics">Physics</option>
+            <option value="chemistry">Chemistry</option>
+            <option value="programming">Programming</option>
+          </select>
+          <input type="hidden" id="editing-id" value="" />
+          <button type="submit" id="enter-btn">Enter</button>
+        </form>
+        <div id="container"></div>
       </div>
-      <div>
-        <label for="a">Answer</label>
-      <textarea name="a" id="a"></textarea>
+      <div class="study-zone hidden">
+        <button type="button" id="panel">Back to Panel</button>
       </div>
-      <select name="cat" id="cat">
-        <option value="" selected disabled>Category</option>
-        <option value="sport">Sport</option>
-        <option value="religion">Religion</option>
-        <option value="cinema">Cinema</option>
-        <option value="history">History</option>
-        <option value="geography">Geography</option>
-        <option value="math">Math</option>
-        <option value="physics">Physics</option>
-        <option value="chemistry">Chemistry</option>
-        <option value="programming">Programming</option>
-      </select>
-      <input type="hidden" id="editing-id" value="" />
-      <button type="submit" id="enter-btn">Enter</button>
-    </form>
-    <div id="container"></div>
-</div>
     </main>
   </body>
 </html>

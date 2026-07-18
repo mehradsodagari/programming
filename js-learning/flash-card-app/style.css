@@ -9,16 +9,55 @@
   padding: 0;
   box-sizing: border-box;
 }
+body {
+  margin: 0;
+  background: rgba(230, 0, 230, 0.521);
+}
 main {
   background: rgba(230, 0, 230, 0.521);
-  height: 100vh;
+  min-height: 100vh;
   padding: var(--space-xl);
+}
+.card {
+  background: grey;
+  padding: var(--space-l);
+  margin: var(--space-m);
+  border-radius: var(--space-s);
+  color: white;
+}
+.card .show-btn,
+.card .edit-btn,
+.card .del-btn,
+.card .fav-btn {
+  padding: var(--space-s) var(--space-m);
+  margin: var(--space-s);
+  border-radius: var(--space-s);
+  color: white;
+  border: none;
+  outline: 1px solid black;
+}
+.card .show-btn {
+  background: green;
+}
+.card .edit-btn {
+  background: rgb(0, 81, 255);
+}
+.card .del-btn {
+  background: rgb(255, 0, 0);
+}
+.card .fav-btn {
+  background: gold;
+  color: black;
 }
 .answer {
   display: none;
 }
 .card.flipped .answer {
   display: block;
+}
+.card.flipped {
+  color: black;
+  border: 1px solid black;
 }
 .card.is-fav {
   border: 2px solid gold;
@@ -30,7 +69,7 @@ main {
   flex-direction: column;
   padding: var(--space-m);
   background: lightblue;
-  width: 400px;
+  width: 600px;
   margin: 0 auto;
   border-radius: var(--space-l);
 }
@@ -62,7 +101,7 @@ form * {
 #search {
   padding: var(--space-s) var(--space-m);
   border-radius: var(--space-s);
-  border: none; 
+  border: none;
   transition: all 0.3s;
 }
 #search:focus {
@@ -118,5 +157,47 @@ form * {
 }
 #enter-btn:hover {
   background: lightpink;
+  transform: scale(1.1);
+}
+.study-zone {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: var(--space-l) auto;
+  flex-direction: column;
+  padding: var(--space-m);
+  background: rgb(104, 194, 224);
+  width: 400px;
+  border-radius: var(--space-l);
+  width: 600px;
+}
+.hidden {
+  display: none;
+}
+#start {
+  padding: var(--space-s) var(--space-m);
+  border-radius: var(--space-s);
+  border: none;
+  margin: var(--space-l) auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s;
+}
+#start:hover {
+  background: rgba(0, 102, 255, 0.784);
+  color: white;
+  transform: scale(1.1);
+}
+#panel {
+  padding: var(--space-s) var(--space-m);
+  border-radius: var(--space-s);
+  border: none;
+  margin: var(--space-m);
+  transition: all 0.3s;
+}
+#panel:hover {
+  background: rgba(0, 102, 255, 0.784);
+  color: white;
   transform: scale(1.1);
 }

@@ -91,7 +91,7 @@ function render() {
       section.classList.toggle("flipped");
       section.style.backgroundColor = section.classList.contains("flipped")
         ? "#eef"
-        : "#fff";
+        : "grey";
     });
     favoriteBTN.addEventListener("click", (e) => {
       e.stopPropagation();
@@ -157,9 +157,23 @@ function filterSearch() {
   }
   return list;
 }
+function study() {
+  let studyZone = document.querySelector(".study-zone");
+  let main = document.getElementById("main");
+  main.classList.add("hidden");
+  studyZone.classList.remove("hidden");
+}
+function backToPanel() {
+  let studyZone = document.querySelector(".study-zone");
+  let main = document.getElementById("main");
+  main.classList.remove("hidden");
+  studyZone.classList.add("hidden");
+}
 document.addEventListener("DOMContentLoaded", () => {
   render();
   document.getElementById("search").addEventListener("input", render);
   document.getElementById("topic").addEventListener("change", render);
+  document.getElementById("start").addEventListener("click", study);
+  document.getElementById("panel").addEventListener("click", backToPanel);
 });
 document.querySelector("form").addEventListener("submit", saveCard);
