@@ -201,3 +201,12 @@ form * {
   color: white;
   transform: scale(1.1);
 }
+#next, #previous {
+  padding: var(--space-s) var(--space-m);
+  border-radius: var(--space-s);
+  border: none;
+  outline: 1px solid black;
+  color: black;
+  background: rgb(0, 255, 145);
+  margin: var(--space-m);
+}
