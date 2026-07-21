@@ -201,7 +201,8 @@ form * {
   color: white;
   transform: scale(1.1);
 }
-#next, #previous {
+#next,
+#previous {
   padding: var(--space-s) var(--space-m);
   border-radius: var(--space-s);
   border: none;
@@ -209,4 +210,16 @@ form * {
   color: black;
   background: rgb(0, 255, 145);
   margin: var(--space-m);
+}
+#fav-cards {
+  appearance: none;
+}
+.check-span {
+  background: white;
+  padding: var(--space-s) var(--space-m);
+  border-radius: var(--space-s);
+}
+#fav-cards:checked + .check-span {
+  background: gold;
+  border-radius: var(--space-s);
 }
