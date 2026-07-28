@@ -7,11 +7,11 @@
     <script src="./app.js" defer></script>
   </head>
   <body>
-    <form action="" onsubmit="getInformation(event)">
-      <input type="text" name="name" id="name" />
-      <input type="text" name="type" id="type" />
-      <input type="number" name="day" id="day" />
-      <input type="date" name="last" id="last" />
+    <form action="">
+      <input type="text" name="name" id="name" required />
+      <input type="text" name="type" id="type" required />
+      <input type="number" name="day" id="day" required />
+      <input type="date" name="last" id="last" required />
       <button type="submit">Add</button>
     </form>
     <div id="container"></div>
