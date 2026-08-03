@@ -1,12 +1,45 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <script src="./app.js" defer></script>
-</head>
-<body>
-    
-</body>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <h1>Task Manager</h1>
+    <form>
+      <h2>Create Task</h2>
+      <label for="title">Task Title</label>
+      <input type="text" name="title" id="title" />
+      <select name="stat" id="stat">
+        <option value="status" selected disabled>Status</option>
+        <option value="todo">To Do</option>
+        <option value="progress">In Progress</option>
+        <option value="done">Done</option>
+      </select>
+      <select name="pri" id="pri">
+        <option value="priority" selected disabled>Priority</option>
+        <option value="high">High</option>
+        <option value="medium">Medium</option>
+        <option value="low">Low</option>
+      </select>
+      <button type="submit">Create</button>
+    </form>
+    <div>
+      <section class="todo-column">
+        <h3>To Do</h3>
+        <div class="todo-column-container"></div>
+      </section>
+      <section class="in-progress-column">
+        <h3>In Progress</h3>
+        <div class="in-progress-column-container"></div>
+      </section>
+      <section class="done-column">
+        <h3>Done</h3>
+        <div class="done-column-container"></div>
+      </section>
+    </div>
+  </body>
 </html>
