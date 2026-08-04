@@ -65,6 +65,7 @@ class UIManager {
             const delBtn = document.createElement("button")
             delBtn.textContent = "Delete"
             delBtn.dataset.id = task.id
+            delBtn.classList.add("delete-btn")
             const priority = document.createElement("p")
             const date = document.createElement("p")
             title.textContent = `Title : ${task.title}`
@@ -116,5 +117,13 @@ document.addEventListener("DOMContentLoaded",() => {
         if(isCreated) {
             event.currentTarget.reset()
         }
+    })
+    document.querySelector(".board").addEventListener("click",(event) => {
+        if(!event.target.classList.contains("delete-btn")) {
+            return 
+        }
+        const taskId = Number(event.target.dataset.id)
+        view.manager.deleteTask(taskId)
+        view.render()
     })
 })
