@@ -7,7 +7,7 @@ class Task {
         this.priority = priority;
         this.createdAt = new Date(createdAt)
     }
-    toggleStatus(newStatus) {
+    updateStatus(newStatus) {
         this.status = newStatus
     }
     updateTitle(newTitle) {
@@ -22,7 +22,7 @@ class TaskManager{
     constructor() {
         this.tasks = (this.loadFromLocalStorage() || []).map(task => new Task(task.id,task.title,task.status,task.priority,task.createdAt))
     }
-    addTask(title,status="todo",priority) {
+    addTask(title,status="todo",priority="medium") {
         const task = new Task(idCount++,title,status,priority)
         localStorage.setItem("id-count",JSON.stringify(idCount))
         this.tasks.push(task)
@@ -42,10 +42,34 @@ class TaskManager{
         return 
     }
     saveToLocalStorage() {
-        localStorage.setItem("tasks",JSON.stringify(this.tasks))
+        try {
+            localStorage.setItem("tasks",JSON.stringify(this.tasks))
+        }
+        catch(error) {
+            alert(error.message)
+        }
     }
     loadFromLocalStorage() {
-        return JSON.parse(localStorage.getItem("tasks"))
+        try{
+            return JSON.parse(localStorage.getItem("tasks"))
+        }
+        catch(error) {
+            alert(error.message)
+        }
+    }
+    updateTaskStatus(id,newStatus) {
+        const task = this.getTaskById(id)
+        if(task) {
+            task.updateStatus(newStatus)
+            this.saveToLocalStorage()
+        }
+    }
+    updateTaskTitle(id,newTitle) {
+        const task = this.getTaskById(id)
+        if(task) {
+            task.updateTitle(newTitle)
+            this.saveToLocalStorage()
+        }
     }
 }
 class UIManager {
@@ -66,6 +90,10 @@ class UIManager {
             delBtn.textContent = "Delete"
             delBtn.dataset.id = task.id
             delBtn.classList.add("delete-btn")
+            const editBtn = document.createElement("button")
+            editBtn.textContent = "Edit"
+            editBtn.dataset.id = task.id
+            editBtn.classList.add("edit-btn")
             const priority = document.createElement("p")
             const date = document.createElement("p")
             title.textContent = `Title : ${task.title}`
@@ -75,14 +103,38 @@ class UIManager {
             container.appendChild(priority)
             container.appendChild(date)
             container.appendChild(delBtn)
+            container.appendChild(editBtn)
             if(task.status === "todo") {
+                const moveNext = document.createElement("button")
+                moveNext.textContent = "Move to Progress"
+                moveNext.dataset.id = task.id
+                moveNext.dataset.targetStatus = "progress"
+                moveNext.classList.add("move-btn")
+                container.appendChild(moveNext)
                 todo.appendChild(container)
             }
             else if(task.status === "progress") {
+                const moveNext = document.createElement("button")
+                moveNext.textContent = "Move to Done"
+                moveNext.dataset.id = task.id
+                moveNext.dataset.targetStatus = "done"
+                moveNext.classList.add("move-btn")
+                const movePrevious = document.createElement("button")
+                movePrevious.textContent = "Move to ToDo"
+                movePrevious.dataset.id = task.id
+                movePrevious.dataset.targetStatus = "todo"
+                movePrevious.classList.add("move-btn")
+                container.appendChild(moveNext)
+                container.appendChild(movePrevious)
                 progress.appendChild(container)
             }
             else if(task.status === "done") {
-                
+                const movePrevious = document.createElement("button")
+                movePrevious.textContent = "Move to Progress"
+                movePrevious.dataset.id = task.id
+                movePrevious.dataset.targetStatus = "progress"
+                movePrevious.classList.add("move-btn")
+                container.appendChild(movePrevious)
                 done.appendChild(container)
             }
         }
@@ -119,11 +171,37 @@ document.addEventListener("DOMContentLoaded",() => {
         }
     })
     document.querySelector(".board").addEventListener("click",(event) => {
-        if(!event.target.classList.contains("delete-btn")) {
+        if(event.target.classList.contains("delete-btn")) {
+            const taskId = Number(event.target.dataset.id)
+            view.manager.deleteTask(taskId)
+            view.render()
             return 
         }
-        const taskId = Number(event.target.dataset.id)
-        view.manager.deleteTask(taskId)
-        view.render()
+         if(event.target.classList.contains("move-btn")) {
+             const taskId = Number(event.target.dataset.id)
+             const taskStatus = event.target.dataset.targetStatus
+             view.manager.updateTaskStatus(taskId,taskStatus)
+             view.render()
+             return
+            }
+            if(event.target.classList.contains("edit-btn")) {
+                const taskId = Number(event.target.dataset.id)
+                const task = view.manager.getTaskById(taskId)
+                if(!task) {
+                    return
+                }
+                const newTitle = prompt("Enter new title:",task.title)
+                if(newTitle===null) {
+                    return
+                }
+                try {
+                    view.manager.updateTaskTitle(taskId,newTitle)
+                    view.render()
+                }
+                catch(error) {
+                    alert(error.message)
+                }
+            return
+        }
     })
 })
