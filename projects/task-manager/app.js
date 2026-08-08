@@ -73,17 +73,29 @@ class TaskManager{
     }
 }
 class UIManager {
-    constructor() {
+    constructor(currentPriorityFilter="all",currentSortOrder="new") {
         this.manager = new TaskManager()
+        this.currentPriorityFilter = currentPriorityFilter
+        this.currentSortOrder = currentSortOrder
     }
     render() {
+        let tasks = [...this.manager.tasks]
+        if(this.currentPriorityFilter!=="all") {
+            tasks = tasks.filter(task => task.priority===this.currentPriorityFilter)
+        }
+        if(this.currentSortOrder==="new") {
+            tasks = tasks.sort((a,b) => b.createdAt-a.createdAt)
+        }
+        else {
+            tasks = tasks.sort((a,b) => a.createdAt-b.createdAt)
+        }
         const todo = document.querySelector(".todo-column-container")
         const progress = document.querySelector(".in-progress-column-container")
         const done = document.querySelector(".done-column-container")
         todo.innerHTML = ""
         progress.innerHTML = ""
         done.innerHTML = ""
-        for(let task of this.manager.tasks) {
+        for(let task of tasks) {
             const container = document.createElement("div")
             const title = document.createElement("p")
             const delBtn = document.createElement("button")
@@ -203,5 +215,13 @@ document.addEventListener("DOMContentLoaded",() => {
                 }
             return
         }
+    })
+    document.getElementById("filter-priority").addEventListener("change",(event) => {
+        view.currentPriorityFilter = event.target.value
+        view.render()
+    })
+    document.getElementById("sort-order").addEventListener("change",(event) => {
+        view.currentSortOrder = event.target.value
+        view.render()
     })
 })
