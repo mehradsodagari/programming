@@ -132,6 +132,7 @@ class UIManager {
         done.innerHTML = ""
         for(let task of tasks) {
             const container = document.createElement("div")
+            container.classList.add("task")
             const title = document.createElement("p")
             const delBtn = document.createElement("button")
             delBtn.textContent = "Delete"
@@ -142,6 +143,16 @@ class UIManager {
             editBtn.dataset.id = task.id
             editBtn.classList.add("edit-btn")
             const priority = document.createElement("p")
+            priority.classList.add("task-priority")
+            if(this.currentPriorityFilter==="high") {
+                priority.classList.add("high")
+            }
+            else if(this.currentPriorityFilter==="medium") {
+                priority.classList.add("medium")
+            }
+            else if(this.currentPriorityFilter==="low") {
+                priority.classList.add("low")
+            }
             const date = document.createElement("p")
             title.textContent = `Title : ${task.title}`
             priority.textContent = `Priority : ${task.priority}`

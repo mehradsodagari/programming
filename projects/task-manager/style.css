@@ -1,0 +1,109 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root {
+    --small: 0.5rem;
+    --medium: 1rem;
+    --large: 1.5rem;
+    --x-large: 2rem;
+    --primary-color: darkblue;
+    --hermaphrodite-color: rgb(238, 238, 238);
+    --bg-color: rgb(170, 170, 170);
+    --dark-bg-color: rgb(94, 94, 94);
+    --low-status-color: rgba(0, 219, 0, 0.88);
+    --medium-status-color: orange;
+    --high-status-color: red;
+}
+body {
+    background: var(--hermaphrodite-color);
+    min-height: 100dvh;
+    margin: var(--small);
+}
+#header {
+    padding: var(--small);
+}
+.board {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: var(--large) var(--small);
+    padding: var(--medium);
+    width: 100%;
+}
+.todo-column,
+.in-progress-column,
+.done-column {
+    background: var(--bg-color);
+    width: 30%;
+    text-align: center;
+    border-radius: var(--medium);
+}
+.task {
+    background: white;
+    border-radius: var(--small);
+    box-shadow: 0 0 var(--small) rgba(0, 0, 0, 0.1);
+    padding: var(--small);
+    transition: all 0.2s;
+    margin: var(--small);
+}
+.task:hover {
+    box-shadow: 0 0 var(--small) rgba(0, 0, 0, 0.15);
+    transform: scale(1.02);
+}
+#title,
+#search {
+    padding: var(--small) var(--medium);
+    margin: var(--small);
+    border-radius: var(--small);
+    border: 1px solid gray;
+}
+#stat,
+#pri,
+#filter-priority,
+#sort-order {
+    padding: 0.25rem var(--small);
+    margin: var(--small);
+    border-radius: var(--small);
+    border: 1px solid gray;
+}
+#title:focus,
+#search:focus,
+#stat:focus,
+#pri:focus,
+#filter-priority:focus,
+#sort-order:focus {
+    box-shadow: 0 0 var(--small) var(--hermaphrodite-color);
+}
+.submit-btn,
+.delete-btn,
+.edit-btn,
+.move-btn {
+    padding: 0.25rem var(--small);
+    margin: var(--small);
+    border-radius: var(--small);
+    border: none;
+    background: var(--dark-bg-color);
+    color: white;
+}
+.delete-btn {
+    background: rgba(255, 0, 0, 0.586);
+}
+.task-priority {
+    outline: 1px solid black;
+    width: 50%;
+    margin: 2px auto;
+}
+.high {
+    background: pink;
+    color: var(--high-status-color);
+}
+.medium {
+    background: var(--medium-status-color);
+    color: orangered;
+}
+.low {
+    background: var(--low-status-color);
+    color: green;
+}
