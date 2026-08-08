@@ -1,4 +1,11 @@
-let idCount = JSON.parse(localStorage.getItem("id-count")) || 0
+let idCount = 0
+try {
+    let saved = localStorage.getItem("id-count")
+    idCount = (saved && saved!=="undefined" && saved!=="null") ? JSON.parse(saved) : 0
+}
+catch(error) {
+    idCount = 0
+}
 class Task {
     constructor(id,title,status="todo",priority="medium",createdAt = new Date()) {
         this.id = id;
@@ -21,6 +28,14 @@ class Task {
 class TaskManager{
     constructor() {
         this.tasks = (this.loadFromLocalStorage() || []).map(task => new Task(task.id,task.title,task.status,task.priority,task.createdAt))
+        const maxId = this.tasks.reduce((max, task) => {
+            return Math.max(max, task.id)
+        }, -1)
+
+        if (idCount <= maxId) {
+            idCount = maxId + 1
+            localStorage.setItem("id-count", JSON.stringify(idCount))
+        }
     }
     addTask(title,status="todo",priority="medium") {
         const task = new Task(idCount++,title,status,priority)
@@ -51,10 +66,12 @@ class TaskManager{
     }
     loadFromLocalStorage() {
         try{
-            return JSON.parse(localStorage.getItem("tasks"))
+            let data = localStorage.getItem("tasks")
+            return (data && data!=="undefined" && data!=="null") ? JSON.parse(data) : []
         }
         catch(error) {
             alert(error.message)
+            return []
         }
     }
     updateTaskStatus(id,newStatus) {
@@ -73,13 +90,31 @@ class TaskManager{
     }
 }
 class UIManager {
-    constructor(currentPriorityFilter="all",currentSortOrder="new") {
+    constructor(currentPriorityFilter,currentSortOrder,currentSearchQuery="") {
         this.manager = new TaskManager()
+        try{
+            let saved = localStorage.getItem("priority")
+            currentPriorityFilter =  saved || "all"
+        }
+        catch(error) {
+            currentPriorityFilter = "all"
+        }
+        try{
+            let saved = localStorage.getItem("sort-order")
+            currentSortOrder =  saved || "new"
+        }
+        catch(error) {
+            currentSortOrder = "new"
+        }
         this.currentPriorityFilter = currentPriorityFilter
         this.currentSortOrder = currentSortOrder
+        this.currentSearchQuery = currentSearchQuery
     }
     render() {
         let tasks = [...this.manager.tasks]
+        if(this.currentSearchQuery.trim().length>0) {
+            tasks = tasks.filter(task => task.title.toLowerCase().includes(this.currentSearchQuery.toLowerCase()))
+        }
         if(this.currentPriorityFilter!=="all") {
             tasks = tasks.filter(task => task.priority===this.currentPriorityFilter)
         }
@@ -174,6 +209,8 @@ class UIManager {
 }
 document.addEventListener("DOMContentLoaded",() => {
     const view = new UIManager() 
+    document.getElementById("filter-priority").value = view.currentPriorityFilter
+    document.getElementById("sort-order").value = view.currentSortOrder
     view.render()
     document.querySelector("form").addEventListener("submit",(event) => {
         event.preventDefault()
@@ -218,10 +255,16 @@ document.addEventListener("DOMContentLoaded",() => {
     })
     document.getElementById("filter-priority").addEventListener("change",(event) => {
         view.currentPriorityFilter = event.target.value
+        localStorage.setItem("priority",view.currentPriorityFilter)
         view.render()
     })
     document.getElementById("sort-order").addEventListener("change",(event) => {
         view.currentSortOrder = event.target.value
+        localStorage.setItem("sort-order",view.currentSortOrder)
+        view.render()
+    })
+    document.getElementById('search').addEventListener("input",(event) => {
+        view.currentSearchQuery = event.target.value
         view.render()
     })
 })
