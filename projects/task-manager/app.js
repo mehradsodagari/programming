@@ -54,7 +54,7 @@ class TaskManager{
                 return task
             }
         }
-        return 
+        return null
     }
     saveToLocalStorage() {
         try {
@@ -90,27 +90,31 @@ class TaskManager{
     }
 }
 class UIManager {
-    constructor(currentPriorityFilter,currentSortOrder,currentSearchQuery="") {
+    constructor() {
         this.manager = new TaskManager()
-        try{
-            let saved = localStorage.getItem("priority")
-            currentPriorityFilter =  saved || "all"
-        }
-        catch(error) {
-            currentPriorityFilter = "all"
-        }
-        try{
-            let saved = localStorage.getItem("sort-order")
-            currentSortOrder =  saved || "new"
-        }
-        catch(error) {
-            currentSortOrder = "new"
-        }
-        this.currentPriorityFilter = currentPriorityFilter
-        this.currentSortOrder = currentSortOrder
-        this.currentSearchQuery = currentSearchQuery
+        this.currentPriorityFilter = localStorage.getItem("priority") || "all"
+        this.currentSortOrder = localStorage.getItem("sort-order") || "new"
+        this.currentSearchQuery = ""
+        this.currentEditingTaskId = null 
     }
     render() {
+        let todoLength = 0
+        let progressLength = 0
+        let doneLength = 0
+        this.manager.tasks.forEach(task => {
+            if(task.status==="todo") {
+                todoLength++
+            }
+            else if(task.status==="progress") {
+                progressLength++
+            }
+            else {
+                doneLength++
+            }
+        })
+        document.getElementById("todo-header").textContent= `To Do(${todoLength})`
+        document.getElementById("progress-header").textContent= `Progress(${progressLength})`
+        document.getElementById("done-header").textContent= `Done(${doneLength})`
         let tasks = [...this.manager.tasks]
         if(this.currentSearchQuery.trim().length>0) {
             tasks = tasks.filter(task => task.title.toLowerCase().includes(this.currentSearchQuery.toLowerCase()))
@@ -119,10 +123,27 @@ class UIManager {
             tasks = tasks.filter(task => task.priority===this.currentPriorityFilter)
         }
         if(this.currentSortOrder==="new") {
-            tasks = tasks.sort((a,b) => b.createdAt-a.createdAt)
+            tasks = tasks.sort((a,b) => b.createdAt.getTime()-a.createdAt.getTime())
         }
         else {
-            tasks = tasks.sort((a,b) => a.createdAt-b.createdAt)
+            tasks = tasks.sort((a,b) => a.createdAt.getTime()-b.createdAt.getTime())
+        }
+        if(tasks.length===0) {
+            let messageDiv = document.getElementById("message")
+            messageDiv.innerHTML = ""
+            document.querySelector(".board").style.display = "none"
+            let message = document.createElement("p")
+            if (this.manager.tasks.length === 0) {
+                message.textContent = "No tasks yet"
+            } else {
+                message.textContent = "No results found for your search"
+}
+            message.classList.add("message")
+            messageDiv.appendChild(message)
+        }
+        else {
+            document.querySelector(".board").style.display = "flex"
+            document.getElementById("message").innerHTML = ""
         }
         const todo = document.querySelector(".todo-column-container")
         const progress = document.querySelector(".in-progress-column-container")
@@ -134,6 +155,7 @@ class UIManager {
             const container = document.createElement("div")
             container.classList.add("task")
             const title = document.createElement("p")
+            title.classList.add("title-txt")
             const delBtn = document.createElement("button")
             delBtn.textContent = "Delete"
             delBtn.dataset.id = task.id
@@ -144,19 +166,20 @@ class UIManager {
             editBtn.classList.add("edit-btn")
             const priority = document.createElement("p")
             priority.classList.add("task-priority")
-            if(this.currentPriorityFilter==="high") {
+            if(task.priority==="high") {
                 priority.classList.add("high")
             }
-            else if(this.currentPriorityFilter==="medium") {
+            else if(task.priority==="medium") {
                 priority.classList.add("medium")
             }
-            else if(this.currentPriorityFilter==="low") {
+            else if(task.priority==="low") {
                 priority.classList.add("low")
             }
             const date = document.createElement("p")
             title.textContent = `Title : ${task.title}`
             priority.textContent = `Priority : ${task.priority}`
             date.textContent = `Created At : ${task.createdAt.toDateString()}`
+            date.classList.add("created-at")
             container.appendChild(title)
             container.appendChild(priority)
             container.appendChild(date)
@@ -168,6 +191,7 @@ class UIManager {
                 moveNext.dataset.id = task.id
                 moveNext.dataset.targetStatus = "progress"
                 moveNext.classList.add("move-btn")
+                moveNext.classList.add("next")
                 container.appendChild(moveNext)
                 todo.appendChild(container)
             }
@@ -177,13 +201,14 @@ class UIManager {
                 moveNext.dataset.id = task.id
                 moveNext.dataset.targetStatus = "done"
                 moveNext.classList.add("move-btn")
+                moveNext.classList.add("next")
                 const movePrevious = document.createElement("button")
                 movePrevious.textContent = "Move to ToDo"
                 movePrevious.dataset.id = task.id
                 movePrevious.dataset.targetStatus = "todo"
                 movePrevious.classList.add("move-btn")
-                container.appendChild(moveNext)
                 container.appendChild(movePrevious)
+                container.appendChild(moveNext)
                 progress.appendChild(container)
             }
             else if(task.status === "done") {
@@ -195,6 +220,24 @@ class UIManager {
                 container.appendChild(movePrevious)
                 done.appendChild(container)
             }
+        }
+        if(todoLength===0) {
+            let noTask = document.createElement("p")
+            noTask.textContent = "No tasks here"
+            noTask.classList.add("no-task")
+            todo.appendChild(noTask)
+        }
+        if(progressLength===0) {
+            let noTask = document.createElement("p")
+            noTask.textContent = "No tasks here"
+            noTask.classList.add("no-task")
+            progress.appendChild(noTask)
+        }
+        if(doneLength===0) {
+            let noTask = document.createElement("p")
+            noTask.textContent = "No tasks here"
+            noTask.classList.add("no-task")
+            done.appendChild(noTask)
         }
     }
     createTask() {
@@ -250,19 +293,30 @@ document.addEventListener("DOMContentLoaded",() => {
                 if(!task) {
                     return
                 }
-                const newTitle = prompt("Enter new title:",task.title)
-                if(newTitle===null) {
-                    return
-                }
-                try {
-                    view.manager.updateTaskTitle(taskId,newTitle)
-                    view.render()
-                }
-                catch(error) {
-                    alert(error.message)
-                }
-            return
+                view.currentEditingTaskId = taskId
+                document.getElementById("modal-input").value = task.title
+                document.getElementById("overlay").style.display = "flex"
         }
+    })
+    document.getElementById("save").addEventListener("click", () => {
+    const modalInput = document.getElementById("modal-input")
+    const newTitle = modalInput.value.trim()
+
+    if (newTitle.length === 0) {
+        alert("Title cannot be empty")
+        return
+    }
+
+    view.manager.updateTaskTitle(view.currentEditingTaskId, newTitle)
+    view.render()
+    document.getElementById("overlay").style.display = "none"
+    view.currentEditingTaskId = null
+    modalInput.value = ""
+    })
+    document.getElementById("cancel").addEventListener("click",(event) => {
+        view.currentEditingTaskId = null
+        document.getElementById("modal-input").value = ""
+        document.getElementById("overlay").style.display = "none"
     })
     document.getElementById("filter-priority").addEventListener("change",(event) => {
         view.currentPriorityFilter = event.target.value

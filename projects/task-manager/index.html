@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Task Manager</title>
     <script src="./app.js" defer></script>
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
@@ -13,10 +13,12 @@
       <h1>Task Manager</h1>
     </header>
     <main>
-      <form>
-        <h2>Create Task</h2>
-        <label for="title">Task Title</label>
-        <input type="text" name="title" id="title" />
+      <h2 class="form-header">Create Task</h2>
+      <form id="form">
+        <div class="form-title">
+          <label for="title">Task Title</label>
+          <input type="text" name="title" id="title" />
+        </div>
         <select name="stat" id="stat">
           <option value="status" selected disabled>Status</option>
           <option value="todo">To Do</option>
@@ -31,7 +33,7 @@
         </select>
         <button type="submit" class="submit-btn">Create</button>
       </form>
-      <div>
+      <div class="filtering">
         <input
           type="text"
           name="search"
@@ -49,19 +51,28 @@
           <option value="old">Oldest First</option>
         </select>
       </div>
+      <div id="message"></div>
       <div class="board">
         <section class="todo-column">
-          <h3>To Do</h3>
+          <h3 id="todo-header">To Do</h3>
           <div class="todo-column-container"></div>
         </section>
         <section class="in-progress-column">
-          <h3>In Progress</h3>
+          <h3 id="progress-header">In Progress</h3>
           <div class="in-progress-column-container"></div>
         </section>
         <section class="done-column">
-          <h3>Done</h3>
+          <h3 id="done-header">Done</h3>
           <div class="done-column-container"></div>
         </section>
+      </div>
+      <div id="overlay">
+        <div id="modal">
+          <h3>Edit Task</h3>
+          <input type="text" name="" id="modal-input" />
+          <button id="save" type="button">Save</button>
+          <button id="cancel" type="button">Cancel</button>
+        </div>
       </div>
     </main>
     <footer></footer>
