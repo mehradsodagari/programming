@@ -136,7 +136,7 @@ class UIManager {
             if (this.manager.tasks.length === 0) {
                 message.textContent = "No tasks yet"
             } else {
-                message.textContent = "No results found for your search"
+                message.textContent = "No results found for current filters/search"
 }
             message.classList.add("message")
             messageDiv.appendChild(message)
@@ -160,10 +160,12 @@ class UIManager {
             delBtn.textContent = "Delete"
             delBtn.dataset.id = task.id
             delBtn.classList.add("delete-btn")
+            delBtn.setAttribute("type","button")
             const editBtn = document.createElement("button")
             editBtn.textContent = "Edit"
             editBtn.dataset.id = task.id
             editBtn.classList.add("edit-btn")
+            editBtn.setAttribute("type","button")
             const priority = document.createElement("p")
             priority.classList.add("task-priority")
             if(task.priority==="high") {
@@ -192,6 +194,7 @@ class UIManager {
                 moveNext.dataset.targetStatus = "progress"
                 moveNext.classList.add("move-btn")
                 moveNext.classList.add("next")
+                moveNext.setAttribute("type","button")
                 container.appendChild(moveNext)
                 todo.appendChild(container)
             }
@@ -202,11 +205,13 @@ class UIManager {
                 moveNext.dataset.targetStatus = "done"
                 moveNext.classList.add("move-btn")
                 moveNext.classList.add("next")
+                moveNext.setAttribute("type","button")
                 const movePrevious = document.createElement("button")
                 movePrevious.textContent = "Move to ToDo"
                 movePrevious.dataset.id = task.id
                 movePrevious.dataset.targetStatus = "todo"
                 movePrevious.classList.add("move-btn")
+                movePrevious.setAttribute("type","button")
                 container.appendChild(movePrevious)
                 container.appendChild(moveNext)
                 progress.appendChild(container)
@@ -217,6 +222,7 @@ class UIManager {
                 movePrevious.dataset.id = task.id
                 movePrevious.dataset.targetStatus = "progress"
                 movePrevious.classList.add("move-btn")
+                movePrevious.setAttribute("type","button")
                 container.appendChild(movePrevious)
                 done.appendChild(container)
             }
@@ -331,5 +337,17 @@ document.addEventListener("DOMContentLoaded",() => {
     document.getElementById('search').addEventListener("input",(event) => {
         view.currentSearchQuery = event.target.value
         view.render()
+    })
+    document.getElementById("modal-input").addEventListener("keydown",(event) => {
+        if(event.key==="Enter") {
+            event.preventDefault()
+            document.getElementById("save").click()
+        }
+    })
+    document.getElementById("overlay").addEventListener("click",(event) => {
+        let clickinside = document.getElementById("modal").contains(event.target)
+        if(!clickinside) {
+            document.getElementById("cancel").click()
+        }
     })
 })
