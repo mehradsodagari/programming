@@ -13,7 +13,7 @@
   --bg-color: rgb(170, 170, 170);
   --dark-bg-color: rgb(94, 94, 94);
   --low-status-color: rgba(0, 219, 0, 0.88);
-  --medium-status-color: orange;
+  --medium-status-color: rgb(255, 213, 0);
   --high-status-color: red;
 }
 body {
@@ -98,16 +98,16 @@ body {
   margin: 2px auto;
 }
 .high {
-  background: pink;
+  background: rgba(253, 204, 212, 0.969);
   color: var(--high-status-color);
 }
 .medium {
   background: var(--medium-status-color);
-  color: orangered;
+  color: rgb(255, 0, 0);
 }
 .low {
   background: var(--low-status-color);
-  color: green;
+  color: rgb(0, 82, 0);
 }
 .title-txt {
   font-weight: bold;
