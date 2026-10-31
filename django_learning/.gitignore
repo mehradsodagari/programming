@@ -1,0 +1,32 @@
+# محیط‌های مجازی (Virtual Environments)
+venv/
+env/
+ENV/
+.venv/
+
+# فایل‌های کش پایتون (Byte-compiled / optimized files)
+__pycache__/
+*.py[cod]
+*$py.class
+
+# پایگاه‌داده لوکال
+*.sqlite3
+db.sqlite3
+
+# فایل‌های حساس / متغیرهای محیطی
+.env
+local_settings.py
+
+# فایل‌های رسانه‌ای کاربر (اگر در آینده اضافه شد)
+media/
+
+# فایل‌های موقت ادیتورها و سیستم‌عامل
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# گزارش‌های لاگ
+*.log
