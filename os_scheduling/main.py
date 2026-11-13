@@ -31,7 +31,7 @@ def main():
     except ValueError:
         os.system("cls")
         context_switch = float(input("Enter the context switch: "))
-    results = np.FCFS(processes,context_switch)
+    results = np.SPN(processes,context_switch)
     for result in results:
         print(result)
 if __name__=="__main__":
