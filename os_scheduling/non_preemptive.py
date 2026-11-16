@@ -7,7 +7,7 @@ class NONPreemptive:
             return []
         sorted_processes = sorted(processes,key=lambda p: p.arrival_time)
         schedule = []
-        schedule.append({"pid":"half_context_switch",
+        schedule.append({"pid":"half_cs",
                         "start_time":sorted_processes[0].arrival_time,
                         "end_time":sorted_processes[0].arrival_time+(cs/2)})
         elapsed_time = schedule[-1]["end_time"]
@@ -18,7 +18,7 @@ class NONPreemptive:
                                 "end_time":sorted_processes[p].arrival_time}) 
                 elapsed_time=schedule[-1]["end_time"]
                 if p!=0:
-                    schedule.append({"pid":"context_switch",
+                    schedule.append({"pid":"cs",
                                     "start_time":schedule[-1]["end_time"],
                                     "end_time":schedule[-1]["end_time"]+cs})
                     elapsed_time=schedule[-1]["end_time"]
@@ -28,7 +28,7 @@ class NONPreemptive:
                 elapsed_time=schedule[-1]["end_time"]
             else:
                 if p!=0:
-                    schedule.append({"pid":"context_switch",
+                    schedule.append({"pid":"cs",
                                     "start_time":schedule[-1]["end_time"],
                                     "end_time":schedule[-1]["end_time"]+cs})
                     elapsed_time=schedule[-1]["end_time"]
@@ -37,7 +37,7 @@ class NONPreemptive:
                                 "end_time":schedule[-1]["end_time"]+sorted_processes[p].CPU_burst_time})
                 elapsed_time=schedule[-1]["end_time"]
             if p==len(sorted_processes)-1:
-                schedule.append({"pid":"half_context_switch",
+                schedule.append({"pid":"half_cs",
                                 "start_time":schedule[-1]["end_time"],
                                 "end_time":schedule[-1]["end_time"]+(cs/2)})
             elapsed_time=schedule[-1]["end_time"]
@@ -49,7 +49,7 @@ class NONPreemptive:
         length = len(sorted_processes)
         schedule = []
         queue = []
-        schedule.append({"pid":"half_context_switch",
+        schedule.append({"pid":"half_cs",
                          "start_time":sorted_processes[0].arrival_time,
                          "end_time":sorted_processes[0].arrival_time+(cs/2)})
         elapsed_time = schedule[-1]["end_time"]
@@ -62,7 +62,7 @@ class NONPreemptive:
                                 "end_time":p.arrival_time}) 
                 elapsed_time=schedule[-1]["end_time"]
                 if n!=0:
-                    schedule.append({"pid":"context_switch",
+                    schedule.append({"pid":"cs",
                                     "start_time":schedule[-1]["end_time"],
                                     "end_time":schedule[-1]["end_time"]+cs})
                     elapsed_time=schedule[-1]["end_time"]
@@ -72,7 +72,7 @@ class NONPreemptive:
                 elapsed_time=schedule[-1]["end_time"]
             else:
                 if n!=0:
-                    schedule.append({"pid":"context_switch",
+                    schedule.append({"pid":"cs",
                                     "start_time":schedule[-1]["end_time"],
                                     "end_time":schedule[-1]["end_time"]+cs})
                     elapsed_time=schedule[-1]["end_time"]
@@ -90,7 +90,7 @@ class NONPreemptive:
                 else:
                     p=sorted_processes[0]
             if n==length-1:
-                schedule.append({"pid":"half_context_switch",
+                schedule.append({"pid":"half_cs",
                                 "start_time":schedule[-1]["end_time"],
                                 "end_time":schedule[-1]["end_time"]+(cs/2)})
             elapsed_time=schedule[-1]["end_time"]
@@ -106,7 +106,7 @@ class NONPreemptive:
         schedule = []
         queue = []
         elapsed_time = 0
-        schedule.append({"pid":"half_context_switch",
+        schedule.append({"pid":"half_cs",
                          "start_time":sorted_processes[0].arrival_time,
                          "end_time":sorted_processes[0].arrival_time+(cs/2)})
         elapsed_time = schedule[-1]["end_time"]
@@ -119,7 +119,7 @@ class NONPreemptive:
                                 "end_time":p.arrival_time}) 
                 elapsed_time=schedule[-1]["end_time"]
                 if n!=0:
-                    schedule.append({"pid":"context_switch",
+                    schedule.append({"pid":"cs",
                                     "start_time":schedule[-1]["end_time"],
                                     "end_time":schedule[-1]["end_time"]+cs})
                     elapsed_time=schedule[-1]["end_time"]
@@ -129,7 +129,7 @@ class NONPreemptive:
                 elapsed_time=schedule[-1]["end_time"]
             else:
                 if n!=0:
-                    schedule.append({"pid":"context_switch",
+                    schedule.append({"pid":"cs",
                                     "start_time":schedule[-1]["end_time"],
                                     "end_time":schedule[-1]["end_time"]+cs})
                     elapsed_time=schedule[-1]["end_time"]
@@ -147,7 +147,7 @@ class NONPreemptive:
                 else:
                     p=sorted_processes[0]
             if n==length-1:
-                schedule.append({"pid":"half_context_switch",
+                schedule.append({"pid":"half_cs",
                                 "start_time":schedule[-1]["end_time"],
                                 "end_time":schedule[-1]["end_time"]+(cs/2)})
             elapsed_time=schedule[-1]["end_time"]

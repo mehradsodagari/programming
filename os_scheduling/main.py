@@ -2,6 +2,7 @@ import os
 from process import Process 
 from non_preemptive import NONPreemptive 
 from preemptive import Preemptive
+from gantt_chart import draw_gantt_chart
 def main():
     np = NONPreemptive()
     p = Preemptive()
@@ -66,5 +67,6 @@ def main():
         results = p.MLFQ(processes,context_switch,quantun_time)
     for result in results:
         print(result)
+    draw_gantt_chart(results)
 if __name__=="__main__":
     main()
