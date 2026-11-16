@@ -5,5 +5,3 @@ class Preemptive:
         pass
     def SRTF(self,processes,cs,q):
         pass
-    def MLFQ(self,processes,cs,q):
-        pass
